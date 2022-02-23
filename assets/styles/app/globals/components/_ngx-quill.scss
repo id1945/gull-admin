@@ -1,0 +1,28 @@
+quill-editor {
+    .ql-toolbar.ql-snow, 
+    .ql-container.ql-snow {
+        border-color: $gray-200;
+        background: $gray-100;
+    }
+    .ql-container {
+        min-height: 120px;
+    }
+    .ql-toolbar.ql-snow {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+    }
+    .ql-container.ql-snow {
+        border-bottom-left-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+    &.rounded {
+        .ql-toolbar.ql-snow {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .ql-container.ql-snow {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+}

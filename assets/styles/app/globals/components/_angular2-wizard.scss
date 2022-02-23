@@ -1,0 +1,39 @@
+form-wizard {
+    .card {
+        overflow: hidden;
+        .card-header {
+            font-size: 1rem;
+        }
+        .card-block {
+            padding: 1.25rem 1.25rem 0;
+        }
+        .nav {
+            .nav-item {
+                padding: 0;
+                border: 0;
+                &.active {
+                    font-weight: normal;
+                    a {
+                        border-bottom-color: $primary !important;
+                        background: rgba($primary, .1);
+                    }
+                }
+                a {
+                    border-bottom: 2px solid $gray-300;
+                    height: 56px;
+                    display: block;
+                    line-height: 56px;
+                    white-space: nowrap !important;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
+                    transition: all .2s ease-in;
+                }
+            }
+        }
+        .card-footer {
+            .btn {
+                @include button-outline-variant($primary);
+            }
+        }
+    }
+}

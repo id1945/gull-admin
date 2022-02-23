@@ -1,0 +1,98 @@
+@mixin flex-row-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin ngx-item() {
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    @include flex-row-center();
+    &:hover {
+        background: transparent;
+    }
+    span {
+        line-height: 100%;
+    }
+}
+
+.ngx-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    a:focus {
+        outline: none;
+    }
+    .pagination-previous, 
+    .pagination-next {
+        border-radius: 10px !important;
+        height: 36px;
+        @include flex-row-center();
+        a {
+            color: $foreground;
+            @include flex-row-center();
+            &:hover {
+                background: transparent;
+            }
+            span {
+                line-height: 100%;
+            }
+        }
+        &.disabled {
+
+        }
+    }
+    li:not(.pagination-previous):not(.pagination-next):not(.small-screen) {
+        border: none;
+        background: transparent;
+        border-radius: 50% !important;
+        margin: 0 4px !important;
+        text-align: center;
+        @include ngx-item;
+        a {
+            color: $foreground;
+            @include ngx-item;
+        }
+        &.current {
+            border: 1px solid $primary;
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+.ngx-pagination .pagination-previous a::before, 
+.ngx-pagination .pagination-previous.disabled::before,
+
+.ngx-pagination .pagination-next a::after, 
+.ngx-pagination .pagination-next.disabled::after {
+    font-family: 'iconsmind' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 32px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ngx-pagination .pagination-previous a::before, 
+.ngx-pagination .pagination-previous.disabled::before {
+    content: "\f077" !important;
+}
+
+.ngx-pagination .pagination-next a::after, 
+.ngx-pagination .pagination-next.disabled::after {
+    content: "\f07d" !important;
+}
+
+[dir="rtl"] {
+    .pagination-next, .pagination-previous {
+        transform: rotate(180deg);
+    }
+}

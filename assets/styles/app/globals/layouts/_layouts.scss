@@ -1,0 +1,17 @@
+@import 'colors';
+@import 'sidebar-compact/layout-sidebar-compact';
+@import 'sidebar-large/layout-sidebar-large';
+@import 'footer';
+
+
+// Common Layout Styles
+
+[dir="rtl"] {
+    .notification-dropdown .dropdown-item .notification-details {
+        text-align: right;
+    }
+    .main-header .user {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+}
