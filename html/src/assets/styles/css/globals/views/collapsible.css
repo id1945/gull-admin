@@ -1,0 +1,24 @@
+._r_cursor-pointer {
+  cursor: pointer; }
+
+._r_border-top-info {
+  border-bottom: 1px solid #663399; }
+
+.__r-card-v-space {
+  border-radius: 0;
+  box-shadow: 0;
+  margin: 30px 0; }
+
+.__r-card-vns {
+  border-radius: 0;
+  box-shadow: none; }
+
+.header-elements-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; }
+
+.__r-list-icons-font i {
+  font-weight: 700;
+  margin: 0 2px; }

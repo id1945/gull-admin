@@ -1,0 +1,77 @@
+<div>
+  <div class="d-flex pl-3 pr-3 pt-2 pb-2 o-hidden box-shadow-1 chat-topbar">
+      <a appSidebarToggler="chat-sidebar" class="link-icon d-md-none">
+        <i class="icon-regular i-Right ml-0 mr-3"></i> 
+      </a>
+      <div class="d-flex align-items-center" *ngIf="activeContact?.id">
+      <img [src]="activeContact?.avatar" 
+      [alt]="activeContact?.name" 
+      class="avatar-sm rounded-circle mr-2">
+      <p class="m-0 text-title text-16 flex-grow-1">{{activeContact?.name}}</p>
+    </div>
+  </div>
+
+  <div [perfectScrollbar]="{suppressScrollX: true}" class="chat-content rtl-ps-none" *ngIf="!chatService.loadingCollection && chatCollection">
+    <div *ngFor="let chat of chatCollection?.chats" class="mb-4">
+
+      <div *ngIf="chat.contactId !== activeContact.id" class="d-flex user">
+        <img [src]="user?.avatar" [alt]="user?.name" class="avatar-sm rounded-circle mr-3">
+        <div class="message flex-grow-1">
+          <div class="d-flex">
+            <p class="mb-1 text-title text-16 flex-grow-1">{{user?.name}}</p>
+            <span class="text-small text-muted">{{chat.time | date}}</span>
+          </div>
+          <p class="m-0">{{chat.text}}</p>
+        </div>
+      </div>
+      <div *ngIf="chat.contactId === activeContact.id" class="d-flex">
+        <div class="message flex-grow-1">
+            <div class="d-flex">
+              <p class="mb-1 text-title text-16 flex-grow-1">{{activeContact?.name}}</p>
+              <span class="text-small text-muted">{{chat.time | date}}</span>
+            </div>
+          <p class="m-0">{{chat.text}}</p>
+        </div>
+        <img [src]="activeContact?.avatar" 
+        [alt]="activeContact?.name" 
+        class="avatar-sm rounded-circle ml-3">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="pl-3 pr-3 pt-3 pb-3 box-shadow-1 chat-input-area" 
+  *ngIf="chatCollection && !chatService.loadingCollection">
+    <form #msgForm="ngForm" 
+    class="inputForm" 
+    (ngSubmit)="sendMessage($event)" 
+    (keyup.enter)="sendMessage($event)">
+      <div class="form-group">
+        <textarea class="form-control form-control-rounded" #msgInput
+        ngModel
+        placeholder="Type your message"
+        name="message" id="message" cols="30" rows="3"></textarea>
+      </div>
+      <div class="d-flex">
+        <div class="flex-grow-1"></div>
+        <button class="btn btn-icon btn-rounded btn-primary mr-2">
+          <i class="i-Paper-Plane"></i>
+        </button>
+        <button class="btn btn-icon btn-rounded btn-outline-primary" type="button">
+          <i class="i-Add-File"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="spinner-glow spinner-glow-warning" 
+  *ngIf="chatService.loadingCollection"></div>
+
+  <div class="app-inro-circle" *ngIf="!chatCollection && !chatService.loadingCollection">
+    <div class="border rounded-circle big-bubble"  [@animate]="{value:'*',params:{scale:'.2',delay:'400ms', duration: '400ms'}}">
+      <i class="i-Speach-Bubbles"></i>
+    </div>
+    <p class="text-16" [@animate]="{value:'*',params:{y:'120px',delay:'600ms', duration: '400ms'}}">Select a contact and start chat.</p>
+  </div>
+
+</div>

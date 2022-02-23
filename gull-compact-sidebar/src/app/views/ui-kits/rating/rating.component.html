@@ -1,0 +1,59 @@
+<div class="breadcrumb">
+    <h1>Rating</h1>
+    <ul>
+        <li><a href="">UI Kits</a></li>
+        <li>Rating</li>
+    </ul>
+</div>
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Rating component</div>
+                <ngb-rating [(rate)]="currentRate" class="rating-primary text-18"></ngb-rating>
+                <hr>
+                <pre>Rate: <b>{{currentRate}}</b></pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Custom decimal rating</div>
+                <p>Custom rating template provided via a variable. Shows fine-grained rating display</p>
+
+                <ng-template #t let-fill="fill">
+                    <span class="star" [class.full]="fill === 100">
+                        <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                    </span>
+                </ng-template>
+
+                <ngb-rating class="rating-danger text-18" [(rate)]="heartRating" [starTemplate]="t" [readonly]="true"
+                    max="5"></ngb-rating>
+
+                <hr>
+                <pre>Rate: <b>{{heartRating}}</b></pre>
+                <button class="btn btn-rounded btn-sm btn-outline-primary mr-2" (click)="heartRating = 1.35">1.35</button>
+                <button class="btn btn-rounded btn-sm btn-outline-primary mr-2" (click)="heartRating = 4.72">4.72</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">Colors & Sizes</div>
+                <p class="m-0">All the rating components are connected to a same variable</p>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-primary mr-3 mb-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-secondary text-20 m-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-warning text-22 m-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-success text-24 m-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-info text-26 m-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-danger text-28 m-3"></ngb-rating>
+                <ngb-rating [(rate)]="demoRating" max="5" class="rating-dark text-30 m-3"></ngb-rating>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="customizer" [ngClass]="{ open: isOpen }">
+  <div class="handle" (click)="isOpen = !isOpen">
+    <i class="i-Gear spin"></i>
+  </div>
+  <div class="customizer-body" perfectScrollbar>
+    <ngb-accordion #acc="ngbAccordion" activeIds="tab-layouts, tab-sidebar-colors">
+      <ngb-panel title="Layouts" id="tab-layouts">
+        <ng-template ngbPanelContent>
+          <div class="layouts">
+            <div
+              *ngFor="let l of layouts"
+              (click)="selectLayout(l)"
+              class="layout-box"
+              [ngClass]="{active: customizer.selectedLayout.name === l.name}"
+            >
+              <img [src]="l.img" alt="" />
+              <i class="i-Eye"></i>
+            </div>
+          </div>
+          <div class="text-center pt-3">More layouts coming...</div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="tab-sidebar-colors" title="Sidebar Colors" *ngIf="customizer.selectedLayout.name !== 'applayout-sidebar-large'">
+        <ng-template ngbPanelContent>
+          <div class="colors">
+            <a 
+                *ngFor="let c of colors" 
+                class="color {{c.class}}"
+                [ngClass]="{active: customizer?.selectedSidebarColor?.class === c.class}"
+                (click)="selectSidebarColor(c)" 
+                [title]="c.class">
+                <i class="i-Eye"></i>
+            </a>
+          </div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Bootstrap themes">
+        <ng-template ngbPanelContent>
+          <div class="colors">
+            <a href="http://gull.ui-lib.com/purple/" class="color purple"></a>
+            <a href="http://gull.ui-lib.com/blue/" class="color blue"></a>
+          </div>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Others">
+        <ng-template ngbPanelContent>
+            <label class="checkbox checkbox-primary">
+                <input type="checkbox" [(ngModel)]="isRTL" (change)="toggleDir()">
+                <span>Enable RTL</span>
+                <span class="checkmark"></span>
+            </label>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="breadcrumb">
+  <h1>Tag Input</h1>
+  <ul>
+    <li><a href="">Forms</a></li>
+    <li>Tag input</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Tag inputs</div>
+        <tag-input [formControl]="tagsCtrl1"
+          (onSelect)="onSelect($event)"
+          [modelAsStrings]="true" theme='primary'>
+        </tag-input>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Autocomplete</div>
+        <tag-input [formControl]="tagsCtrl2"
+          (onSelect)="onSelect($event)"
+          theme='primary' placeholder="Type Country name">
+          <tag-input-dropdown [focusFirstElement]="true" [autocompleteItems]="autocompletes$ | async">
+          </tag-input-dropdown>
+        </tag-input>
+      </div>
+    </div>
+  </div>
+</div>
+  

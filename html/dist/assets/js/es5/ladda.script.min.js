@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".basic-ladda-button").on("click",function(t){var e=t.currentTarget,a=Ladda.create(e);a.start(),setTimeout(function(){a.stop()},3e3)}),$(".example-button").on("click",function(t){var e=t.currentTarget,a=Ladda.create(e);a.start(),setTimeout(function(){a.stop()},3e3)})});

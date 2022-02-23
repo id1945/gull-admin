@@ -1,0 +1,46 @@
+<div class="breadcrumb">
+    <h1>Buttons Loading</h1>
+    <ul>
+        <li><a href="">UI Kits</a></li>
+        <li>Buttons Loading</li>
+    </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Gull Custom Loading Buttons</div>
+                <div>
+                    <btn-loading 
+                    *ngFor="let btn of loadingButtons"
+                    btnClass="btn-{{btn.name}} btn-rounded m-1" 
+                    [loading]="btn.loading" 
+                    loadingText="Loading..."
+                    (click)="showLoading(btn)">
+                        Click me
+                    </btn-loading>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">Ladda Buttons</div>
+                <div>
+                    <button 
+                    *ngFor="let btn of laddaButtons"
+                    class="btn btn-{{btn.name}} btn-rounded ladda-button m-1"
+                    [ladda]="btn.loading" 
+                    (click)="showLoading(btn)">
+                        Click me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

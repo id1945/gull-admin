@@ -1,0 +1,60 @@
+<div class="breadcrumb">
+  <h1>Alerts</h1>
+  <ul>
+    <li><a href="">UI Kits</a></li>
+    <li>Alerts</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-12" *ngIf="mainAlert">
+    <ngb-alert class="alert-card text-center" (close)="mainAlert = false">
+      Gull makes developent life easier! <button class="btn btn-rounded btn-warning ml-3">Buy Now</button>
+    </ngb-alert>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Ngx Toastr</div>
+        <button class="btn btn-rounded btn-outline-success m-1" (click)="success()">Launch Success</button>
+        <button class="btn btn-rounded btn-outline-warning m-1" (click)="warning()">Launch Warning</button>
+        <button class="btn btn-rounded btn-outline-info m-1" (click)="info()">Launch Info</button>
+        <button class="btn btn-rounded btn-outline-danger m-1" (click)="error()">Launch Error</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Toastr with Progress Bar</div>
+        <button class="btn btn-rounded btn-outline-success m-1" (click)="successBar()">Launch Success</button>
+        <button class="btn btn-rounded btn-outline-warning m-1" (click)="warningBar()">Launch Warning</button>
+        <button class="btn btn-rounded btn-outline-info m-1" (click)="infoBar()">Launch Info</button>
+        <button class="btn btn-rounded btn-outline-danger m-1" (click)="errorBar()">Launch Error</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Bootstrap Alerts</div>
+
+        <ngb-alert [type]="alert.type" *ngFor="let alert of alerts" (close)="closeAlert(alert)">
+          <strong class="text-capitalize">{{alert.type}}!</strong> {{alert.message}}
+        </ngb-alert>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <ngb-alert class="alert-card mb-4" [type]="alert.type" *ngFor="let alert of alertCards" (close)="closeAlertCard(alert)">
+        <strong class="text-capitalize">{{alert.type}}!</strong> {{alert.message}}
+    </ngb-alert>
+  </div>
+  
+</div>

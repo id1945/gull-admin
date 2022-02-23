@@ -1,0 +1,86 @@
+<div>
+    <!-- MAIN SIDEBAR CONTAINER -->
+    <div appSidebarContainer class="inbox-main-sidebar-container">
+        <div appSidebarContent class="inbox-main-content">
+            <!-- SECONDARY SIDEBAR CONTAINER -->
+            <div appSidebarContainer class="inbox-secondary-sidebar-container box-shadow-1">
+                <div appSidebarContent>
+                    <div class="inbox-secondary-sidebar-content position-relative" style="min-height: 500px">
+                        <div class="inbox-topbar box-shadow-1 pl-3 rtl-ps-none" [perfectScrollbar]="{suppressScrollY: true}">
+                            <!-- <span class="d-sm-none">Test</span> -->
+                            <a appSidebarToggler="inbox-main-sidebar" class="link-icon d-md-none">
+                                <i class="icon-regular i-Arrow-Turn-Left"></i>
+                            </a>
+                            <a appSidebarToggler="inbox-secondary-sidebar" class="link-icon mr-3 d-md-none">
+                                <i class="icon-regular mr-1 i-Left-3"></i>
+                                Inbox
+                            </a>
+
+                            <div class="d-flex" *ngIf="selected">
+                                <a href="" class="link-icon mr-3"><i class="icon-regular i-Mail-Reply"></i> Reply</a>
+                                <a href="" class="link-icon mr-3"><i class="icon-regular i-Mail-Reply-All"></i> Forward</a>
+                                <a href="" class="link-icon mr-3"><i class="icon-regular i-Mail-Reply-All"></i> Delete</a>
+                            </div>
+                        </div>
+                        <!-- EMAIL DETAILS -->
+                        <div class="inbox-details rtl-ps-none" *ngIf="selected" [perfectScrollbar]="{suppressScrollX: true}">
+                            <div class="row no-gutters">
+                                <div class="mr-2" style="width: 36px">
+                                    <img class="rounded-circle" [src]="selected?.sender?.photo" alt="">
+                                </div>
+                                <div class="col-xs-12">
+                                    <p class="m-0">{{selected?.sender?.name}}</p>
+                                    <p class="text-12 text-muted">{{selected?.date | date}}</p>
+                                </div>
+                            </div>
+                            <h4 class="mb-3">{{selected?.subject}}</h4>
+                            <div [innerHTML]="selected?.message"></div>
+                        </div>
+                        <!-- Intro screen -->
+                        <div class="app-inro-circle inbox-intro" *ngIf="!selected">
+                            <div class="border rounded-circle big-bubble" [@animate]="{value:'*',params:{scale:'.2',delay:'400ms', duration: '400ms'}}">
+                                <i class="i-Email"></i>
+                            </div>
+                            <p class="text-16" [@animate]="{value:'*',params:{y:'120px',delay:'600ms', duration: '400ms'}}">Inbox
+                                App</p>
+                        </div>
+                    </div>
+                </div>
+                <div appSidebar="inbox-secondary-sidebar" class="inbox-secondary-sidebar rtl-ps-none" [perfectScrollbar]="{suppressScrollX: true}">
+                    <i class="sidebar-close i-Close" appSidebarToggler="inbox-secondary-sidebar"></i>
+
+                    <div class="mail-item" *ngFor="let m of mails$ | async" (click)="select(m)">
+                        <div class="avatar">
+                            <img [src]="m.sender.photo" alt="">
+                        </div>
+                        <div class="col-xs-6 details">
+                            <span class="name text-muted">{{m.sender.name}}</span>
+                            <p class="m-0">{{m.subject}}</p>
+                        </div>
+                        <div class="col-xs-3 date">
+                            <span class="text-muted">{{m.date | date}}</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN SIDEBAR -->
+        <div appSidebar="inbox-main-sidebar" class="inbox-main-sidebar">
+            <div class="pt-3 pr-3 pb-3">
+                <i class="sidebar-close i-Close" appSidebarToggler="inbox-main-sidebar"></i>
+                <button class="btn btn-rounded btn-primary btn-block mb-4" (click)="openComposeModal()">Compose</button>
+                <p class="text-muted mb-2">Browse</p>
+                <ul class="inbox-main-nav">
+                    <li><a href="" class="active"><i class="icon-regular i-Mail-2"></i> Inbox (2)</a></li>
+                    <li><a href=""><i class="icon-regular i-Mail-Outbox"></i> Sent</a></li>
+                    <li><a href=""><i class="icon-regular i-Mail-Favorite"></i> Starred</a></li>
+                    <li><a href=""><i class="icon-regular i-Folder-Trash"></i> Trash</a></li>
+                    <li><a href=""><i class="icon-regular i-Spam-Mail"></i> Spam</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

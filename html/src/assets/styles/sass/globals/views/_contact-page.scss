@@ -1,0 +1,32 @@
+.ul-contact-page {
+}
+.ul-contact-page__profile {
+  display: flex;
+  align-items: center;
+  .user-profile {
+    height: 150px;
+    width: 150px;
+  }
+}
+.ul-contact-page__info {
+  /* margin-right: 2px; */
+  margin-left: 23px;
+  width: calc(100% - 126px);
+}
+
+// search form
+.ul-form-input {
+  width: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 425px) {
+  .ul-contact-page__profile {
+    text-align: center;
+    display: block;
+  }
+  .ul-contact-page__info {
+    margin-left: 0;
+    width: 100%;
+  }
+}

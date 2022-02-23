@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Documentation | Gull angular bootstrap 4 admin template</title>
+    <meta name="description" content="Documentation of Gull Angular Bootstrap 4 Admin Template. Multi theme and feature rich angular admin dashboard template">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.indigo-light_blue.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color-text--blue-grey-50">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Documentation</span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--indigo-900">
+        <header class="demo-drawer-header mdl-color--white-500">
+          <a href="" target="_blank">
+            <img src="images/logo.png" class="doc-logo">
+          </a>
+        </header>
+        <nav class="demo-navigation mdl-navigation ">
+          
+          <a class="mdl-navigation__link" href="#getting-started"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">forward</i>Getting Started</a>
+         
+              <a class="mdl-navigation__link" href="#folder-structure"><i class="mdl-color-text--blue-grey-400 material-icons" 
+                role="presentation">folder</i>Folder Structure</a>
+            <a class="mdl-navigation__link" href="#navigation"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">view_list</i>Navigation</a>
+            
+        
+          <a class="mdl-navigation__link" href="#theming"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">format_color_fill</i>Theming Guide</a>
+          
+          <a class="mdl-navigation__link" href="#auth"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">perm_identity</i>Authentication</a>
+          <a class="mdl-navigation__link" href="#classes"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">code</i>Css Classes</a>
+          <a class="mdl-navigation__link" href="#dependencies"><i class="mdl-color-text--blue-grey-400 material-icons" 
+            role="presentation">local_offer</i>Dependencies</a>
+          
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+
+          <div id="getting-started" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Getting Started</h3>
+            <p>Make sure you have <code>Nodejs</code>, <code>NPM</code> and <code>@angular/cli</code> installed on your computer.</p>
+            <p>Download node <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download</a></p>
+            <p>Open terminal and run <code>npm install -g @angular/cli</code></p>
+            <p>Angular CLI Doc: <a href="https://cli.angular.io/" target="_blank">https://cli.angular.io</a></p>
+
+            <h5>Serve and build</h5>
+            <p>Use terminal and navigate to project root.</p>
+            <p>Then run <code>npm install</code></p>
+
+            <h5>Development server</h5>
+            <p>Run <code>ng serve</code> for a dev server. Navigate to <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>. 
+            The app will automatically reload if you change any of the source files.</p>
+
+            <h5>Code Scaffolding</h5>
+            <p>Run <code>ng generate component componentName</code> to generate a new component. 
+            You can also use <code>ng generate directive/pipe/service/class/module</code>.</p>
+
+            <h5>Build</h5>
+            <p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the dist/ directory. 
+            Use the <code>-prod</code> flag for a production build.</p>
+            <h5>App Entry Point</h5>
+            <p><code>main.ts</code> (Location: src) is the entry file. And <code>app.scss</code> (Location: "src/assets/styles/app.scss")
+            is the entry file for Styles which is included in <code>angular.json</code> file.</p>
+          </div>
+          <div id="routings" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Route Configuration</h3>
+            <p>There are two main <code>router-outlet</code>s in <code>AuthLayoutComponent</code> and <code>AdminLayoutComponent</code>
+              (Location: src/app/shared/components/layouts). <code>AuthLayoutComponent</code> renders sessions view 
+              (Location: src/app/views/sessions) and <code>AdminLayoutComponent</code> renders all views except sessions view.</p>
+              <p>Each directory in <code>src/app/views</code> is a module. And those modules are lazy loaded which is configured 
+                in <code>app-routing.module.ts</code> (Location: src/app). And also each modules has it's own routing file defines it's child routes.</p>
+          </div>
+          <div id="folder-structure" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Folder Structure</h3>
+            <img src="images/folder-structure.png" alt="">
+          </div>
+          <div id="navigation" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Navigation</h3>
+            <p>Menu items are served by <code>navigation.service.ts</code> (Location: shared/services/navigation.service.ts). 
+              You have to define your menu items there.</p>
+            <p>This service serves array of <code>IMenuItem</code>.</p>
+            <pre><code class="multiline">
+              interface IMenuItem {
+                type: string,       // Possible values: link/dropDown/icon/separator/extLink
+                name?: string,      // Used as display text for item and title for separator type
+                state?: string,     // Router state
+                icon?: string,      // Item icon name
+                tooltip?: string,   // Tooltip text 
+                sub?: IChildItem[]  // Dropdown items
+              }
+              interface IChildItem {
+                name: string,       // Display text
+                state: string       // Router state
+              }
+            </code></pre>
+          </div>
+
+          <div id="theming" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Theming Guide</h3>
+
+            <p>Two custom themes are included.</p>
+            <ul>
+              <li>lite-purple</li>
+              <li>lite-blue</li>
+            </ul>
+            <p>These files are located in <code>src/assets/styles/themes</code></p>
+            
+            <p>Open <code>_custom.scss</code> (Location: src/assets/styles/themes/lite-purple/_custom.scss)
+            and and change the color variables <p>
+            <h5>Color variables</h5>
+            <ul>
+              <li>primary</li>
+              <li>secondary</li>
+              <li>success</li>
+              <li>warning</li>
+              <li>info</li>
+              <li>danger</li>
+              <li>light</li>
+              <li>dark</li>
+            </ul>
+
+            <h3>Sidebar compact Colors</h3>
+            <p>Open <code>shared/components/layouts/admin-layout-sidebar-compact/admin-layout-sidebar-compact.component.html</code>
+                Update the class name of <code>app-admin-wrap</code>.
+            </p>
+            <p>Available colors</p>
+            <ul>
+                <li>sidebar-blue</li>
+                <li>sidebar-midnight-blue</li>
+                <li>sidebar-indigo</li>
+                <li>sidebar-dark-purple</li>
+                <li>sidebar-purple</li>
+                <li>sidebar-pink</li>
+                <li>sidebar-red</li>
+                <li>sidebar-gray</li>
+                <li>sidebar-slate-gray</li>
+                <li>sidebar-gradient-purple-indigo</li>
+                <li>sidebar-gradient-black-blue</li>
+                <li>sidebar-gradient-black-gray</li>
+                <li>sidebar-gradient-steel-gray</li>
+            </ul>
+
+            <p>For more about theming, visit following link</p>
+            <ul>
+              <li><a href="https://getbootstrap.com/docs/4.1/getting-started/theming/#theme-colors" target="_blank">Creating new bootstrap theme.</a></li>
+            </ul>
+          </div>
+
+          
+          <!-- <div id="translation" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Translation</h3>
+            <p>Gull uses <code>TranslateService</code> from package <code>ng2-translate</code>,
+             this service in initialized in <code>AdminLayoutComponent</code> <br> (Location: src/app/shared/components/layouts/admin-layout).</p>
+             <p>"header-top" and "header-side" (Location: src/app/shared/components) components are using same service for 
+               changing current language.</p>
+            <p>Translation files are provided in <code>/src/assets/i18n</code> in JSON format. You should include your own translation in that directory.</p>
+            <p>File name should be your language code name. 
+              Get your language code name <a href="https://www.sitepoint.com/iso-2-letter-language-codes/" target="_blank">here</a></p>
+
+          </div> -->
+
+          <div id="auth" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Authentication</h3>
+            <p>Authentication service is added in service directory. This class implements <code>canActivate</code>.</p>
+            <p><code>canActivate</code> should return <code>true</code> if user is authenticated otherwise return <code>false</code>. 
+            You have to integrate your real authentication API to make that full functional.
+            In <code>app-routing.module.ts</code> file, <code>AdminLayout</code> is guarded by <code>canActivate</code></p>
+          </div>
+
+          <div id="classes" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Common CSS Classes</h3>
+            <div class="mdl-cell--6-col mdl-grid">
+              <h5>Background color</h5>
+              <ul>
+                <li>.bg-primary</li>
+                <li>.bg-success</li>
+                <li>.bg-warning</li>
+                <li>.bg-danger</li>
+                <li>.bg-light</li>
+                <li>.bg-dark</li>
+              </ul>
+              <br>
+              
+              <h5>Color</h5>
+              <ul>
+                <li>.text-primary</li>
+                <li>.text-success</li>
+                <li>.text-warning</li>
+                <li>.text-danger</li>
+                <li>.text-light</li>
+                <li>.text-dark</li>
+              </ul>
+              
+            </div>
+            <div class="mdl-cell--6-col mdl-grid">
+                <h5>Margins</h5>
+                <ul>
+                  <li>.m-0</li>
+                  <li>.m-0</li>
+                  <li>.mt-1</li>
+                  <li>.mr-1</li>
+                  <li>.mb-1</li>
+                  <li>.ml-1</li>
+                  <li>.mb-05 </li>
+                </ul>
+              <h5>Paddings</h5>
+              <ul>
+                <li>.pt-1 </li>
+                <li>.pr-1 </li>
+                <li>.pb-1</li>
+                <li>.pl-1 </li>
+                <li>.p-0</li>
+              </ul>
+            </div>
+            <div>
+              <a href="https://getbootstrap.com/docs/4.1/utilities/borders/">View all Classes</a>
+            </div>
+          </div>
+
+          <div id="dependencies" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+            <h3>Dependencies</h3>
+            
+            <pre>
+                <code class="langulage-javascript">
+                    "dependencies": {
+                        "@angular/animations": "7.0.3",
+                        "@angular/common": "7.0.3",
+                        "@angular/compiler": "7.0.3",
+                        "@angular/core": "7.0.3",
+                        "@angular/forms": "7.0.3",
+                        "@angular/http": "7.0.3",
+                        "@angular/platform-browser": "7.0.3",
+                        "@angular/platform-browser-dynamic": "7.0.3",
+                        "@angular/router": "7.0.3",
+                        "@ng-bootstrap/ng-bootstrap": "4.0.0",
+                        "@swimlane/ngx-datatable": "13.1.0",
+                        "angular-calendar": "0.26.4",
+                        "angular-in-memory-web-api": "0.6.1",
+                        "angular2-ladda": "^2.0.0",
+                        "angular2-text-mask": "^9.0.0",
+                        "bootstrap": "4.1.3",
+                        "classlist.js": "1.1.20150312",
+                        "core-js": "2.5.4",
+                        "date-fns": "1.29.0",
+                        "echarts": "4.2.0-rc.1",
+                        "highlight.js": "9.13.1",
+                        "ngx-custom-validators": "4.2.0",
+                        "ngx-chips": "1.9.8",
+                        "ngx-color-picker": "7.0.1",
+                        "ngx-echarts": "4.0.0",
+                        "ngx-img-cropper": "0.10.4",
+                        "ngx-pagination": "3.2.1",
+                        "ngx-perfect-scrollbar": "6.3.1",
+                        "ngx-quill": "4.0.0",
+                        "ngx-toastr": "9.1.0",
+                        "popper.js": "1.14.4",
+                        "quill": "1.3.6",
+                        "rxjs": "~6.2.0",
+                        "web-animations-js": "2.3.1",
+                        "zone.js": "~0.8.26"
+                      }
+                </code>
+            </pre>
+            
+          </div>
+          <div id="rate" class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid text-center">
+            <p>Do you like Gull?</p>
+            <h5 class="m-0">Don't forget to give a 5 star rating.</h5>
+            <p>This will inspire us to add more features.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <a href="" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--amber-500 mdl-color-text--black">Buy Gull</a>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54187421-6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-54187421-6');
+    </script>
+    <script src="js/prism.js"></script>
+  </body>
+</html>

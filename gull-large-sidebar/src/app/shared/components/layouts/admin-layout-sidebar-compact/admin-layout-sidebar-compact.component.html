@@ -1,0 +1,19 @@
+<div class="app-admin-wrap layout-sidebar-compact clearfix" 
+[ngClass]="{'sidenav-open': navService.sidebarState.sidenavOpen}">
+    <div class="side-content-wrap">
+        <app-sidebar-compact></app-sidebar-compact>
+    </div>
+    <div class="main-content-wrap d-flex flex-column"
+    [perfectScrollbar]="{suppressScrollX: true}">
+        <app-header-sidebar-compact></app-header-sidebar-compact>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="flex-grow-1"></div>
+        <app-footer></app-footer>
+        <div class="module-loader" *ngIf="moduleLoading">
+            <div class="spinner spinner-bubble spinner-bubble-primary mr-3"></div>
+        </div>
+    </div>
+</div>
+<app-search *ngIf="searchService.searchOpen"></app-search>

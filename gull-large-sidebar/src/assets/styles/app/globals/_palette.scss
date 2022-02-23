@@ -1,0 +1,30 @@
+@each $gcolor_name, $gcolor in $gradient-colors {
+  $start-color: map-get($gcolor, start-color);
+  $end-color: map-get($gcolor, end-color);
+
+  .sidebar-#{$gcolor_name} {
+    .sidebar-left {
+      @include directional-gradient(-154deg, $start-color, $end-color);
+    }
+  }
+  .#{$gcolor_name} {
+    @include directional-gradient(-154deg, $start-color, $end-color);
+  }
+  .btn.#{$gcolor_name} {
+    &:active,
+    &.active {
+      @include directional-gradient(-90deg, $start-color, $end-color);
+    }
+  }
+}
+
+@each $color_name, $color in $solid-colors {
+    .sidebar-#{$color_name} {
+        .sidebar-left {
+            background: $color;
+        }
+    }
+    .#{$color_name} {
+        background: $color;
+    }
+}

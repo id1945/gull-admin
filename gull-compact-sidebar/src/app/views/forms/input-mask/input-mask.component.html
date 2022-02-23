@@ -1,0 +1,61 @@
+<div class="breadcrumb">
+    <h1>Masks</h1>
+    <ul>
+        <li><a href="">Form</a></li>
+        <li>Input Masks</li>
+    </ul>
+</div>
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title mb-3">Input Masks</div>
+                <form [formGroup]="formMask" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="isbn1">ISBN 1</label>
+                            <input type="text" class="form-control" id="isbn1" [textMask]="{mask: isbnMask1}"
+                                placeholder="999-99-999-9999-9">
+                        </div>
+
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="isbn2">ISBN 2</label>
+                            <input type="text" class="form-control" id="isbn2" [textMask]="{mask: isbnMask2}"
+                                placeholder="999 99 999 9999 9">
+                        </div>
+
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="isbn3">ISBN 3</label>
+                            <input type="text" class="form-control" id="isbn3" [textMask]="{mask: isbnMask3}"
+                                placeholder="999/99/999/9999/9">
+                        </div>
+
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="phone">Phone</label>
+                            <input class="form-control" id="phone" [textMask]="{mask: phoneMask}" formControlName="phone"
+                                placeholder="(323) 323-4324">
+                        </div>
+
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="card">Master card</label>
+                            <input class="form-control" id="card" [textMask]="{mask: cardMask}" placeholder="9999 9999 9999 9999">
+                        </div>
+
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="picker1">Date</label>
+                            <div class="input-group">
+                                <input id="picker1" class="form-control" [textMask]="{mask: dateMask}" placeholder="mm/dd/yyyy">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <btn-loading btnClass="btn-primary">Submit</btn-loading>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

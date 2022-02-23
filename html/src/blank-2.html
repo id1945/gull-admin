@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Egret - Bootstrap 4 admin template</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/css/themes/lite-purple.min.css">
+        <link rel="stylesheet" href="assets/styles/vendor/perfect-scrollbar.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.10.1-web/css/all.css">
+        <link rel="stylesheet" href="assets/styles/vendor/metisMenu.min.css">
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <div class="app-admin-wrap sidebar-full">
+            <div class="sidebar-panel bg-white">
+
+
+
+
+                <div class="gull-brand pr-3 text-center mt-4 mb-2 d-flex justify-content-center align-items-center">
+                    <img class="pl-3" src="/assets/images/logo.png" alt="">
+                    <!-- <span class=" item-name text-20 text-primary font-weight-700">GULL</span> -->
+                    <div class="sidebar-compact-switch ml-auto"><span></span></div>
+
+                </div>
+                <!-- user -->
+                <div class="scroll-nav" data-perfect-scrollbar data-suppress-scroll-x="true">
+
+                    <!-- user close -->
+                    <!-- side-nav start -->
+                    <div class="side-nav">
+
+                        <div class="main-menu">
+
+                            <!-- <ul>
+                            <li>
+                                <a href="*" class="active-color">
+                                    <span class="item-name text-15">Dashboard</span>
+                                    <span class="spacer"></span>
+                                    <span class="item-badge badge badge-warning">100+</span>
+                                </a>
+                            </li>
+                            
+                        </ul> -->
+                            <ul class="metismenu" id="menu">
+                                <!-- <p class="main-menu-title text-muted ml-3 font-weight-700 text-13 mt-4 mb-2">Apps</p> -->
+                                <li class="Ul_li--hover">
+                                    <a class="has-arrow" href="#">
+                                        <i class="i-Home-4 text-20 mr-2 text-muted"></i>
+                                        <span class="item-name text-15 text-muted">Dashboard</span>
+                                    </a>
+                                    <ul class="mm-collapse">
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Circular-Point  mr-2 text-muted"></i>
+                                                <span class=" text-muted">Dashboard v1</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Circular-Point  mr-2 text-muted"></i>
+                                                <span class=" text-muted">Dashboard v2</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Circular-Point  mr-2 text-muted"></i>
+                                                <span class=" text-muted">Dashboard v3</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Circular-Point  mr-2 text-muted"></i>
+                                                <span class=" text-muted">Dashboard v4</span>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </li>
+                                <li class="Ul_li--hover">
+                                    <a class="" href="#">
+                                        <i class="i-Library text-20 mr-2 text-muted"></i>
+
+                                        <span class="item-name text-15 text-muted">UI Kits</span>
+                                    </a>
+                                </li>
+                                <li class="Ul_li--hover">
+                                    <a class="" href="#">
+                                        <i class="i-Suitcase text-20 mr-2 text-muted"></i>
+                                        <span class="item-name text-15 text-muted">Extra Kits</span>
+                                    </a>
+                                </li>
+                                <li class="Ul_li--hover">
+                                    <a class="" href="#">
+                                        <i class="i-Computer-Secure text-20 mr-2 text-muted"></i>
+                                        <span class="item-name text-15 text-muted">Apps</span>
+                                    </a>
+                                </li>
+
+                                <!-- <p class="main-menu-title text-muted ml-3 font-weight-700 text-13 mt-4 mb-2">UI Elements</p> -->
+                                <li class="Ul_li--hover">
+                                    <a class="has-arrow" href="#">
+                                        <i class="i-Computer-Secure text-20 mr-2 text-muted"></i>
+                                        <span class="item-name text-15 text-muted">Datalist</span>
+                                    </a>
+                                    <ul class="mm-collapse">
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Split-Four-Square-Window text-20 mr-2 text-muted"></i>
+                                                <span class="item-name text-15 text-muted">Grid View</span>
+                                            </a>
+                                        </li>
+                                        <li class="item-name">
+                                            <a class="" href="#">
+                                                <i class="i-Split-Horizontal text-20 mr-2 text-muted"></i>
+                                                <span class="item-name text-15 text-muted">List View </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- side-nav-close -->
+            </div>
+            <div class="main-content-wrap bg-off-white">
+                <!-- header start -->
+                <header class="main-header bg-white d-flex justify-content-between">
+                    <div class="header-toggle">
+                        <i class="i-Add-UserStar mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top"
+                            title="" data-original-title="Todo"></i>
+                        <i class="i-Speach-Bubble-3 mr-3 text-20 cursor-pointer" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Chat"></i>
+                        <i class="i-Email mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top"
+                            title="" data-original-title="Inbox"></i>
+                        <i class="i-Calendar-4 mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top"
+                            title="" data-original-title="Calendar"></i>
+                        <i class="i-Checkout-Basket mr-3 text-20 cursor-pointer" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Calendar"></i>
+
+
+
+
+
+                    </div>
+
+
+                    <div class="header-dropdown d-flex align-items-center">
+                        <input type="text" class="form-control form-control-sm gull-input form-control-rounded mr-2"
+                            id="inlineFormInputName2" placeholder="search....">
+
+                        <div class="language-dropdown">
+                            <div class="btn-group header-btn-group">
+                                <button type="button"
+                                    class="btn btn-secondary btn-sm dropdown-toggle pr-3 b-none_button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                    <span class="language-text">english</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">span</a>
+                                    <a class="dropdown-item" href="#">fre</a>
+                                    <a class="dropdown-item" href="#">ind</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <div class="badge-top-container" id="dropdownNotification" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="badge badge-primary">3</span>
+                                <i class="i-Bell text-muted header-icon"></i>
+
+                            </div>
+                            <!-- Notification dropdown -->
+                            <div class="dropdown-menu dropdown-menu-right rtl-ps-none ps"
+                                aria-labelledby="dropdownNotification" data-perfect-scrollbar=""
+                                data-suppress-scroll-x="true">
+                                <a class="dropdown-item" href="#">span</a>
+                                <a class="dropdown-item" href="#">fre</a>
+                                <a class="dropdown-item" href="#">ind</a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- avatar-dropdown -->
+                        <div class="avatar-dropdown">
+                            <div class="user col align-self-end">
+                                <img src="/assets/images/faces/1.jpg" id="userDropdown" alt="" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                    <div class="dropdown-header">
+                                        <i class="i-Lock-User mr-1"></i> Timothy Carlson
+                                    </div>
+                                    <a class="dropdown-item">Account settings</a>
+                                    <a class="dropdown-item">Billing history</a>
+                                    <a class="dropdown-item" href="">Sign out</a>
+                                </div>
+                            </div>
+                        </div>
+                </header>
+                <!-- header close -->
+
+                <!-- main content start -->
+                <div class="main-content pt-4">
+                    <div class="breadcrumb">
+                        <h1>Buttons</h1>
+                        <ul>
+                            <li><a href="">UI Kits</a></li>
+                            <li>Buttons</li>
+                        </ul>
+                    </div>
+
+                    <div class="separator-breadcrumb border-top"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Default Buttons</div>
+                                    <button type="button" class="btn btn-primary ripple m-1">Primary</button>
+                                    <button type="button" class="btn btn-success m-1">Success</button>
+                                    <button type="button" class="btn btn-danger m-1">Danger</button>
+                                    <button type="button" class="btn btn-warning m-1">Warning</button>
+                                    <button type="button" class="btn btn-info m-1">Info</button>
+                                    <button type="button" class="btn btn-light m-1">Light</button>
+                                    <button type="button" class="btn btn-dark ripple m-1">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Buttons Rounded</div>
+                                    <button type="button" class="btn btn-primary btn-rounded m-1">Primary</button>
+                                    <button type="button" class="btn btn-success btn-rounded m-1">Success</button>
+                                    <button type="button" class="btn btn-danger btn-rounded m-1">Danger</button>
+                                    <button type="button" class="btn btn-warning btn-rounded m-1">Warning</button>
+                                    <button type="button" class="btn btn-info btn-rounded m-1">Info</button>
+                                    <button type="button" class="btn btn-light btn-rounded m-1">Light</button>
+                                    <button type="button" class="btn btn-dark btn-rounded m-1">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Buttons Raised</div>
+                                    <button type="button" class="btn btn-raised btn-raised-primary m-1">Primary</button>
+                                    <button type="button"
+                                        class="btn btn-raised btn-raised-secondary m-1">Secondary</button>
+                                    <button type="button" class="btn btn-raised btn-raised-success m-1">Success</button>
+                                    <button type="button" class="btn btn-raised btn-raised-danger m-1">Danger</button>
+                                    <button type="button" class="btn btn-raised btn-raised-warning m-1">Warning</button>
+                                    <button type="button" class="btn btn-raised btn-raised-info m-1">Info</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        Buttons outline
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary m-1">Primary</button>
+                                    <button type="button" class="btn btn-outline-secondary m-1">Secondary</button>
+                                    <button type="button" class="btn btn-outline-success m-1">Success</button>
+                                    <button type="button" class="btn btn-outline-danger m-1">Danger</button>
+                                    <button type="button" class="btn btn-outline-warning m-1">Warning</button>
+                                    <button type="button" class="btn btn-outline-info m-1">Info</button>
+                                    <button type="button" class="btn btn-outline-dark m-1">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Button block</div>
+                                    <button type="button" class="btn btn-primary btn-block m-1 mb-3">Primary</button>
+                                    <button type="button" class="btn btn-success btn-block m-1 mb-3">Success</button>
+                                    <button type="button" class="btn btn-warning btn-block m-1 mb-3">Warning</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Large & Small Buttons</div>
+                                    <div class="mb-3">
+                                        <button type="button" class="btn btn-primary btn-sm m-1">Primary</button>
+                                        <button type="button" class="btn btn-success btn-sm m-1">Success</button>
+                                        <button type="button" class="btn btn-warning btn-sm m-1">Warning</button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-lg btn-primary m-1">Primary</button>
+                                        <button type="button" class="btn btn-success btn-lg m-1">Success</button>
+                                        <button type="button" class="btn btn-warning btn-lg m-1">Warning</button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn btn-xl btn-primary m-1">Primary</button>
+                                        <button type="button" class="btn btn-success btn-xl m-1">Success</button>
+                                        <button type="button" class="btn btn-warning btn-xl m-1">Warning</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <div class="card-title card-title--margin">Styles- <span
+                                                class="card-subtitle mb-4 text-muted">Button with Icons</span></div>
+
+
+                                        <div class="mb-3">
+                                            <button type="button" class="btn btn-primary btn-icon m-1">
+                                                <span class="ul-btn__icon"><i class="i-Gear-2"></i></span>
+                                                <span class="ul-btn__text">With Icon</span>
+                                            </button>
+                                            <button type="button" class="btn btn-info btn-icon m-1">
+                                                <span class="ul-btn__icon"><i class="i-RSS"></i></span>
+                                            </button>
+
+                                            <button type="button" class="btn btn-success btn-icon m-1">
+                                                Button
+                                            </button>
+                                            <button type="button" class="btn btn-outline-danger btn-icon m-1">
+                                                <span class="ul-btn__icon"><i class="i-Shutter"></i></span>
+                                            </button>
+                                            <button type="button" class="btn btn-warning btn-icon m-1">
+                                                <span class="ul-btn__icon"><i class="i-Atom"></i></span>
+                                                <span class="ul-btn__text">Atom</span>
+                                            </button>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">Buttons Ripple</div>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-primary m-1">Primary</button>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-secondary m-1">Secondary</button>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-success m-1">Success</button>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-danger m-1">Danger</button>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-warning m-1">Warning</button>
+                                    <button type="button"
+                                        class="btn btn-raised ripple btn-raised-info m-1">Info</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        Button group
+                                    </div>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary">Left</button>
+                                        <button type="button" class="btn btn-secondary">Middle</button>
+                                        <button type="button" class="btn btn-secondary">Right</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-title card-title--margin">Social</div>
+
+                                    <div class="ul-bottom__line mb-3">
+                                        <button type="button" class="btn btn-facebook btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Facebook-2"></i></span>
+                                            <span class="ul-btn__text">Facebook</span>
+                                        </button>
+                                        <button type="button" class="btn btn-google btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Google-Plus"></i></span>
+                                            <span class="ul-btn__text">Google +</span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-twitter btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Twitter"></i></span>
+                                            <span class="ul-btn__text">Twitter</span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-instagram btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Instagram"></i></span>
+                                            <span class="ul-btn__text">Instagram</span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-linkedin btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Linkedin-2"></i></span>
+                                            <span class="ul-btn__text">Linkedin</span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-dribble btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Dribble"></i></span>
+                                            <span class="ul-btn__text">Dribble</span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-youtube btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Youtube"></i></span>
+                                            <span class="ul-btn__text">Youtube</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="ul-bottom__line mb-3">
+                                        <button type="button" class="btn btn-facebook btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Facebook-2"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-google btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Google-Plus"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-twitter btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Twitter"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-instagram btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Instagram"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-linkedin btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Linkedin-2"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-dribble btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Dribble"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-youtube btn-icon m-1">
+                                            <span class="ul-btn__icon"><i class="i-Youtube"></i></span>
+                                        </button>
+
+
+                                    </div>
+
+                                    <div class="ul-bottom__line mb-3">
+                                        <button type="button"
+                                            class="btn round btn-facebook btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Facebook-2"></i></span>
+                                        </button>
+                                        <button type="button" class="btn round btn-google btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Google-Plus"></i></span>
+                                        </button>
+                                        <button type="button" class="btn round btn-twitter btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Twitter"></i></span>
+                                        </button>
+                                        <button type="button"
+                                            class="btn round btn-instagram btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Instagram"></i></span>
+                                        </button>
+                                        <button type="button"
+                                            class="btn round btn-linkedin btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Linkedin-2"></i></span>
+                                        </button>
+                                        <button type="button" class="btn round btn-dribble btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Dribble"></i></span>
+                                        </button>
+                                        <button type="button" class="btn btn-youtube btn-icon rounded-circle m-1">
+                                            <span class="ul-btn__icon"><i class="i-Youtube"></i></span>
+                                        </button>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/tooltip.script.js"></script>
+        <script src="assets/js/vendor/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/es5/script.min.js"></script>
+        <script src="assets/js/es5/script_2.js"></script>
+        <script src="assets/js/es5/sidebar.large.script.min.js"></script>
+        <script src="assets/js/vendor/feather.min.js"></script>
+        <script src="assets/js/vendor/metisMenu.min.js"></script>
+        <script>
+            feather.replace()
+        </script>
+        <script>
+            $(function () {
+                $('#menu').metisMenu();
+            });
+        </script>
+
+    </body>
+
+</html>

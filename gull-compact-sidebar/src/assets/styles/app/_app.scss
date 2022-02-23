@@ -1,0 +1,25 @@
+/*
+ *
+ *   GULL - Angular Bootstrap Admin Template
+ *
+ *
+*/
+
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+@import '~ngx-toastr/toastr.css';
+@import "~angular-calendar/css/angular-calendar.css";
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+@import '~highlight.js/styles/github.css';
+@import '~ladda/dist/ladda.min.css';
+@import "../iconsmind/iconsmind.css";
+@import 'variables';
+
+// @import 'themes/lite-blue';
+@import 'themes/lite-purple';
+@import '../vendor/bootstrap/bootstrap.scss';
+@import "bootstrap-rtl.scss";
+@import 'globals/globals';

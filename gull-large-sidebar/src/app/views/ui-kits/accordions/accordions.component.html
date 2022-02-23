@@ -1,0 +1,89 @@
+<div class="breadcrumb">
+	<h1>Accordion</h1>
+	<ul>
+		<li><a href="">UI Kits</a></li>
+		<li>Accordion</li>
+	</ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+<div class="">
+		<ngb-tabset class="p-0">
+				<ngb-tab title="Example">
+					<ng-template ngbTabContent>
+						<ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-0">
+							<ngb-panel title="Accordion">
+								<ng-template ngbPanelContent>
+									<div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+										moon
+										officia
+										aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+										moon
+										tempor,
+										sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+										keffiyeh
+										helvetica,
+										craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+										Leggings
+										occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+										accusamus
+										labore sustainable VHS.
+									</div>
+								</ng-template>
+							</ngb-panel>
+							<ngb-panel>
+								<ng-template ngbPanelTitle>
+									<span>&#9733; <b>Fancy</b> title &#9733;</span>
+								</ng-template>
+								<ng-template ngbPanelContent>
+									<div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+										moon
+										officia
+										aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+										moon
+										tempor,
+										sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+										keffiyeh
+										helvetica,
+										craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+										Leggings
+										occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+										accusamus
+										labore sustainable VHS.
+									</div>
+								</ng-template>
+							</ngb-panel>
+							<ngb-panel title="Simple">
+								<ng-template ngbPanelContent>
+									<div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}">
+										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+										moon
+										officia
+										aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+										moon
+										tempor,
+										sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+										keffiyeh
+										helvetica,
+										craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+										Leggings
+										occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+										accusamus
+										labore sustainable VHS.
+									</div>
+								</ng-template>
+							</ngb-panel>
+						</ngb-accordion>
+					</ng-template>
+				</ngb-tab>
+				<ngb-tab title="Code">
+					<ng-template ngbTabContent>
+						<pre class="m-0">
+							<code [highlight]>{{code}}</code>
+					  	</pre>
+					</ng-template>
+				</ngb-tab>
+			</ngb-tabset>
+</div>

@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gull - Laravel + Bootstrap 4 admin template</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/css/themes/lite-purple.min.css">
+    <link rel="stylesheet" href="assets/styles/vendor/perfect-scrollbar.css">
+</head>
+
+<body class="text-left">
+    <div class="app-admin-wrap layout-sidebar-large">
+        <div class="main-header">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <!-- Mega menu -->
+                <div class="dropdown mega-menu d-none d-md-block">
+                    <a href="#" class="btn text-muted dropdown-toggle mr-3" id="dropdownMegaMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mega Menu</a>
+                    <div class="dropdown-menu text-left" aria-labelledby="dropdownMenuButton">
+                        <div class="row m-0">
+                            <div class="col-md-4 p-4 bg-img">
+                                <h2 class="title">Mega Menu <br> Sidebar</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores natus laboriosam fugit, consequatur.
+                                </p>
+                                <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem odio amet eos dolore suscipit placeat.</p>
+                                <button class="btn btn-lg btn-rounded btn-outline-warning">Learn More</button>
+                            </div>
+                            <div class="col-md-4 p-4">
+                                <p class="text-primary text--cap border-bottom-primary d-inline-block">Features</p>
+                                <div class="menu-icon-grid w-auto p-0">
+                                    <a href="#"><i class="i-Shop-4"></i> Home</a>
+                                    <a href="#"><i class="i-Library"></i> UI Kits</a>
+                                    <a href="#"><i class="i-Drop"></i> Apps</a>
+                                    <a href="#"><i class="i-File-Clipboard-File--Text"></i> Forms</a>
+                                    <a href="#"><i class="i-Checked-User"></i> Sessions</a>
+                                    <a href="#"><i class="i-Ambulance"></i> Support</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 p-4">
+                                <p class="text-primary text--cap border-bottom-primary d-inline-block">Components</p>
+                                <ul class="links">
+                                    <li><a href="accordion.html">Accordion</a></li>
+                                    <li><a href="alerts.html">Alerts</a></li>
+                                    <li><a href="buttons.html">Buttons</a></li>
+                                    <li><a href="badges.html">Badges</a></li>
+                                    <li><a href="carousel.html">Carousels</a></li>
+                                    <li><a href="lists.html">Lists</a></li>
+                                    <li><a href="popover.html">Popover</a></li>
+                                    <li><a href="tables.html">Tables</a></li>
+                                    <li><a href="datatables.html">Datatables</a></li>
+                                    <li><a href="modals.html">Modals</a></li>
+                                    <li><a href="nouislider.html">Sliders</a></li>
+                                    <li><a href="tabs.html">Tabs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Mega menu -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <i class="search-icon text-muted i-Magnifi-Glass1"></i>
+                </div>
+            </div>
+
+            <div style="margin: auto"></div>
+
+            <div class="header-part-right">
+                <!-- Full screen toggle -->
+                <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
+                <!-- Grid menu Dropdown -->
+                <div class="dropdown">
+                    <i class="i-Safe-Box text-muted header-icon" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="menu-icon-grid">
+                            <a href="#"><i class="i-Shop-4"></i> Home</a>
+                            <a href="#"><i class="i-Library"></i> UI Kits</a>
+                            <a href="#"><i class="i-Drop"></i> Apps</a>
+                            <a href="#"><i class="i-File-Clipboard-File--Text"></i> Forms</a>
+                            <a href="#"><i class="i-Checked-User"></i> Sessions</a>
+                            <a href="#"><i class="i-Ambulance"></i> Support</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notificaiton -->
+                <div class="dropdown">
+                    <div class="badge-top-container" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="badge badge-primary">3</span>
+                        <i class="i-Bell text-muted header-icon"></i>
+                    </div>
+                    <!-- Notification dropdown -->
+                    <div class="dropdown-menu dropdown-menu-right notification-dropdown rtl-ps-none" aria-labelledby="dropdownNotification" data-perfect-scrollbar data-suppress-scroll-x="true">
+                        <div class="dropdown-item d-flex">
+                            <div class="notification-icon">
+                                <i class="i-Speach-Bubble-6 text-primary mr-1"></i>
+                            </div>
+                            <div class="notification-details flex-grow-1">
+                                <p class="m-0 d-flex align-items-center">
+                                    <span>New message</span>
+                                    <span class="badge badge-pill badge-primary ml-1 mr-1">new</span>
+                                    <span class="flex-grow-1"></span>
+                                    <span class="text-small text-muted ml-auto">10 sec ago</span>
+                                </p>
+                                <p class="text-small text-muted m-0">James: Hey! are you busy?</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-item d-flex">
+                            <div class="notification-icon">
+                                <i class="i-Receipt-3 text-success mr-1"></i>
+                            </div>
+                            <div class="notification-details flex-grow-1">
+                                <p class="m-0 d-flex align-items-center">
+                                    <span>New order received</span>
+                                    <span class="badge badge-pill badge-success ml-1 mr-1">new</span>
+                                    <span class="flex-grow-1"></span>
+                                    <span class="text-small text-muted ml-auto">2 hours ago</span>
+                                </p>
+                                <p class="text-small text-muted m-0">1 Headphone, 3 iPhone x</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-item d-flex">
+                            <div class="notification-icon">
+                                <i class="i-Empty-Box text-danger mr-1"></i>
+                            </div>
+                            <div class="notification-details flex-grow-1">
+                                <p class="m-0 d-flex align-items-center">
+                                    <span>Product out of stock</span>
+                                    <span class="badge badge-pill badge-danger ml-1 mr-1">3</span>
+                                    <span class="flex-grow-1"></span>
+                                    <span class="text-small text-muted ml-auto">10 hours ago</span>
+                                </p>
+                                <p class="text-small text-muted m-0">Headphone E67, R98, XL90, Q77</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-item d-flex">
+                            <div class="notification-icon">
+                                <i class="i-Data-Power text-success mr-1"></i>
+                            </div>
+                            <div class="notification-details flex-grow-1">
+                                <p class="m-0 d-flex align-items-center">
+                                    <span>Server Up!</span>
+                                    <span class="badge badge-pill badge-success ml-1 mr-1">3</span>
+                                    <span class="flex-grow-1"></span>
+                                    <span class="text-small text-muted ml-auto">14 hours ago</span>
+                                </p>
+                                <p class="text-small text-muted m-0">Server rebooted successfully</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notificaiton End -->
+
+                <!-- User avatar dropdown -->
+                <div class="dropdown">
+                    <div class="user col align-self-end">
+                        <img src="./assets/images/faces/1.jpg" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-header">
+                                <i class="i-Lock-User mr-1"></i> Timothy Carlson
+                            </div>
+                            <a class="dropdown-item">Account settings</a>
+                            <a class="dropdown-item">Billing history</a>
+                            <a class="dropdown-item" href="signin.html">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- header top menu end -->
+
+        <div class="side-content-wrap">
+            <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
+                <ul class="navigation-left">
+                    <li class="nav-item" data-item="dashboard">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Bar-Chart"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="uikits">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Library"></i>
+                            <span class="nav-text">UI kits</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="extrakits">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Suitcase"></i>
+                            <span class="nav-text">Extra kits</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="apps">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Computer-Secure"></i>
+                            <span class="nav-text">Apps</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" data-item="widgets">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Computer-Secure"></i>
+                            <span class="nav-text">Widgets</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item " data-item="charts">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-File-Clipboard-File--Text"></i>
+                            <span class="nav-text">Charts</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+
+
+                    <li class="nav-item" data-item="forms">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-File-Clipboard-File--Text"></i>
+                            <span class="nav-text">Forms</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-hold" href="datatables.html">
+                            <i class="nav-icon i-File-Horizontal-Text"></i>
+                            <span class="nav-text">Datatables</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item" data-item="sessions">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Administrator"></i>
+                            <span class="nav-text">Sessions</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item active" data-item="others">
+                        <a class="nav-item-hold" href="#">
+                            <i class="nav-icon i-Double-Tap"></i>
+                            <span class="nav-text">Others</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item-hold" href="http://demos.ui-lib.com/gull-html-doc/" target="_blank">
+                            <i class="nav-icon i-Safe-Box1"></i>
+                            <span class="nav-text">Doc</span>
+                        </a>
+                        <div class="triangle"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar data-suppress-scroll-x="true">
+                <!-- Submenu Dashboards -->
+                <ul class="childNav" data-parent="dashboard">
+                    <li class="nav-item">
+                        <a href="dashboard.v1.html">
+                            <i class="nav-icon i-Clock-3"></i>
+                            <span class="item-name">Version 1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.v2.html">
+                            <i class="nav-icon i-Clock-4"></i>
+                            <span class="item-name">Version 2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.v3.html">
+                            <i class="nav-icon i-Over-Time"></i>
+                            <span class="item-name">Version 3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dashboard.v4.html">
+                            <i class="nav-icon i-Clock"></i>
+                            <span class="item-name">Version 4</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="forms">
+                    <li class="nav-item">
+                        <a href="form.basic.html">
+                            <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                            <span class="item-name">Basic Elements</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form.layouts.html">
+                            <i class="nav-icon i-Split-Vertical"></i>
+                            <span class="item-name">Form Layouts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form.input.group.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name">Input Groups</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form.validation.html">
+                            <i class="nav-icon i-Close-Window"></i>
+                            <span class="item-name">Form Validation</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="smart.wizard.html">
+                            <i class="nav-icon i-Width-Window"></i>
+                            <span class="item-name">Smart Wizard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tag.input.html">
+                            <i class="nav-icon i-Tag-2"></i>
+                            <span class="item-name">Tag Input</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="editor.html">
+                            <i class="nav-icon i-Pen-2"></i>
+                            <span class="item-name">Rich Editor</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="apps">
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="nav-icon i-Add-File"></i>
+                            <span class="item-name">Invoice</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inbox.html">
+                            <i class="nav-icon i-Email"></i>
+                            <span class="item-name">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="chat.html">
+                            <i class="nav-icon i-Speach-Bubble-3"></i>
+                            <span class="item-name">Chat</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="childNav" data-parent="widgets">
+                    <li class="nav-item">
+                        <a class="" href="widget-card.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name">widget card</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+        
+        
+                        <a class=""
+                            href="widgets-statistics.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name">widget statistics</span>
+                        </a>
+                    </li>
+        
+                    <li class="nav-item">
+        
+        
+                        <a class="" href="widget-list.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name">Widget List <span class="ml-2 badge badge-pill badge-danger">
+                                    New</span></span>
+                        </a>
+                    </li>
+        
+                    <li class="nav-item">
+        
+        
+                        <a class="" href="widget-app.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name">Widget App <span class="ml-2 badge badge-pill badge-danger"> New</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+        
+        
+                        <a class=""
+                            href="weather-card.html">
+                            <i class="nav-icon i-Receipt-4"></i>
+                            <span class="item-name"> Weather App <span class="ml-2 badge badge-pill badge-danger"> New</span>
+                            </span>
+                        </a>
+                    </li>
+        
+                </ul>
+
+
+                <!-- chartjs -->
+                <ul class="childNav" data-parent="charts">
+                    <li class="nav-item">
+                        <a class="" href="charts.echarts.html">
+                            <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                            <span class="item-name">echarts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href="charts.chartsjs.html">
+                            <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                            <span class="item-name">ChartJs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown-sidemenu">
+                        <a class="" href="">
+                            <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                            <span class="item-name">Apex Charts</span>
+                            <i class="dd-arrow i-Arrow-Down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a class=""
+                                    href="charts.apexAreaCharts.html">Area Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexBarCharts.html">Bar Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexBubbleCharts.html">Bubble Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexColumnCharts.html">Column Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexCandleStickCharts.html">CandleStick Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexLineCharts.html">Line Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexMixCharts.html">Mix Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexPieDonutCharts.html">PieDonut Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexRadarCharts.html">Radar Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexRadialBarCharts.html">RadialBar Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexScatterCharts.html">Scatter Charts</a></li>
+                            <li><a class=""
+                                    href="charts.apexSparklineCharts.html">Sparkline Charts</a></li>
+        
+                        </ul>
+                    </li>
+        
+        
+        
+        
+        
+                </ul>
+
+
+                <ul class="childNav" data-parent="extrakits">
+                    <li class="nav-item">
+                        <a href="image.cropper.html">
+                            <i class="nav-icon i-Crop-2"></i>
+                            <span class="item-name">Image Cropper</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loaders.html">
+                            <i class="nav-icon i-Loading-3"></i>
+                            <span class="item-name">Loaders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ladda.button.html">
+                            <i class="nav-icon i-Loading-2"></i>
+                            <span class="item-name">Ladda Buttons</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="toastr.html">
+                            <i class="nav-icon i-Bell"></i>
+                            <span class="item-name">Toastr</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sweet.alerts.html">
+                            <i class="nav-icon i-Approved-Window"></i>
+                            <span class="item-name">Sweet Alerts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tour.html">
+                            <i class="nav-icon i-Plane"></i>
+                            <span class="item-name">User Tour</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="upload.html">
+                            <i class="nav-icon i-Data-Upload"></i>
+                            <span class="item-name">Upload</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="uikits">
+                    <li class="nav-item">
+                        <a href="alerts.html">
+                            <i class="nav-icon i-Bell1"></i>
+                            <span class="item-name">Alerts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown-sidemenu">
+                        <a href="accordion.html">
+                            <i class="nav-icon i-Split-Horizontal-2-Window"></i>
+                            <span class="item-name">Accordion</span>
+                            <i class="dd-arrow i-Arrow-Down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Sub menu item 1</a></li>
+                            <li><a href="">Sub menu item 1</a></li>
+                            <li><a href="">Sub menu item 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-sidemenu">
+                        <a href="badges.html">
+                            <i class="nav-icon i-Medal-2"></i>
+                            <span class="item-name">Badges</span>
+                            <i class="dd-arrow i-Arrow-Down"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Sub menu item 1</a></li>
+                            <li><a href="">Sub menu item 1</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="buttons.html">
+                            <i class="nav-icon i-Cursor-Click"></i>
+                            <span class="item-name">Buttons</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cards.html">
+                            <i class="nav-icon i-Line-Chart-2"></i>
+                            <span class="item-name">Cards</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="card.metrics.html">
+                            <i class="nav-icon i-ID-Card"></i>
+                            <span class="item-name">Card Metrics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="carousel.html">
+                            <i class="nav-icon i-Video-Photographer"></i>
+                            <span class="item-name">Carousels</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="lists.html">
+                            <i class="nav-icon i-Belt-3"></i>
+                            <span class="item-name">Lists</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pagination.html">
+                            <i class="nav-icon i-Arrow-Next"></i>
+                            <span class="item-name">Paginations</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="popover.html">
+                            <i class="nav-icon i-Speach-Bubble-2"></i>
+                            <span class="item-name">Popover</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="progressbar.html">
+                            <i class="nav-icon i-Loading"></i>
+                            <span class="item-name">Progressbar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tables.html">
+                            <i class="nav-icon i-File-Horizontal-Text"></i>
+                            <span class="item-name">Tables</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tabs.html">
+                            <i class="nav-icon i-New-Tab"></i>
+                            <span class="item-name">Tabs</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tooltip.html">
+                            <i class="nav-icon i-Speach-Bubble-8"></i>
+                            <span class="item-name">Tooltip</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="modals.html">
+                            <i class="nav-icon i-Duplicate-Window"></i>
+                            <span class="item-name">Modals</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nouislider.html">
+                            <i class="nav-icon i-Width-Window"></i>
+                            <span class="item-name">Sliders</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="sessions">
+                    <li class="nav-item">
+                        <a href="signin.html">
+                            <i class="nav-icon i-Checked-User"></i>
+                            <span class="item-name">Sign in</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signup.html">
+                            <i class="nav-icon i-Add-User"></i>
+                            <span class="item-name">Sign up</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="forgot.html">
+                            <i class="nav-icon i-Find-User"></i>
+                            <span class="item-name">Forgot</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="childNav" data-parent="others">
+                    <li class="nav-item">
+                        <a href="not.found.html">
+                            <i class="nav-icon i-Error-404-Window"></i>
+                            <span class="item-name">Not Found</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.profile.html">
+                            <i class="nav-icon i-Male"></i>
+                            <span class="item-name">User Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blank.html" class="open">
+                            <i class="nav-icon i-File-Horizontal"></i>
+                            <span class="item-name">Blank Page</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-overlay"></div>
+        </div>
+        <!--=============== Left side End ================-->
+
+        <!-- ============ Body content start ============= -->
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
+            <div class="breadcrumb">
+                <h1>Task Manager</h1>
+                <ul>
+                    <li><a href="">Apps</a></li>
+                    <li>Task Manager</li>
+                </ul>
+
+            </div>
+
+
+
+            <div class="separator-breadcrumb border-top"></div>
+            <div id="task-manager">
+                <!-- top-content-bar -->
+                <div class="row">
+                    <div class="col-xl-10">
+                        <div class="navbar navbar-expand-lg navbar-light navbar-component rounded">
+                            <div class="text-center d-lg-none w-100">
+                                <button type="button" class="task-manager-button navbar-toggler text-white" data-toggle="collapse" data-target="#navbar-filter">
+                                            <i class="i-Filter-2"></i>
+                                            
+                                        </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse" id="navbar-filter">
+                                <div class="filter-mobile">
+                                    <span class="navbar-text font-weight-semibold ">
+                                                Filter:
+                                            </span>
+                                </div>
+
+                                <ul class="navbar-nav flex-wrap">
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="navbar-nav-link " data-toggle="dropdown" aria-expanded="false">
+                                            <i class="i-Time-Window "></i> By date
+                                        </a>
+
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">Show all</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item">Today</a>
+                                            <a href="#" class="dropdown-item">Yesterday</a>
+                                            <a href="#" class="dropdown-item">This week</a>
+                                            <a href="#" class="dropdown-item">This month</a>
+                                            <a href="#" class="dropdown-item">This year</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="navbar-nav-link  " data-toggle="dropdown" aria-expanded="false">
+                                            <i class="i-Bar-Chart-2 "></i> By status
+                                        </a>
+
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">Show all</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item">Open</a>
+                                            <a href="#" class="dropdown-item">On hold</a>
+                                            <a href="#" class="dropdown-item">Resolved</a>
+                                            <a href="#" class="dropdown-item">Closed</a>
+                                            <a href="#" class="dropdown-item">Duplicate</a>
+                                            <a href="#" class="dropdown-item">Invalid</a>
+                                            <a href="#" class="dropdown-item">Wontfix</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="navbar-nav-link" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="i-Arrow-Turn-Right "></i> By priority
+                                        </a>
+
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">Show all</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item">Highest</a>
+                                            <a href="#" class="dropdown-item">High</a>
+                                            <a href="#" class="dropdown-item">Normal</a>
+                                            <a href="#" class="dropdown-item">Low</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- <span class="navbar-text font-weight-semibold mr-2 ml-md-auto">
+                                            View mode:
+                                        </span>
+        
+                                        <div class="form-check form-check-switchery form-check-switchery-double mb-3 mb-lg-0">
+                                            <label class="form-check-label">
+                                                List
+                                                <input type="checkbox" class="form-input-switchery" checked="" data-fouc="" data-switchery="true" style="display: none;"><span class="switchery switchery-default" style="background-color: rgb(100, 189, 99); border-color: rgb(100, 189, 99); box-shadow: rgb(100, 189, 99) 0px 0px 0px 10px inset; transition: border 0.4s ease 0s, box-shadow 0.4s ease 0s, background-color 1.2s ease 0s;"><small style="left: 18px; transition: background-color 0.4s ease 0s, left 0.2s ease 0s; background-color: rgb(255, 255, 255);"></small></span>
+                                                Grid
+                                            </label>
+                                        </div> -->
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!-- end-of-top-content-bar -->
+                <!-- content-start -->
+
+
+                <div class="row">
+                    <div class="col-xl-9">
+                        <div class="row">
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span class="badge badge-mark mr-2 border-danger"></span> Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-warning-400"></span> High priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-success"></span> Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span class="badge badge-mark mr-2 border-grey-300"></span> Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                          class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January,
+                                                          2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                  class="badge badge-mark mr-2 border-danger"></span>
+                                                              Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                  class="badge badge-mark mr-2 border-warning-400"></span>
+                                                              High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                  class="badge badge-mark mr-2 border-success"></span>
+                                                              Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                  class="badge badge-mark mr-2 border-grey-300"></span>
+                                                              Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                          class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i>
+                                                          Check in</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-attachment"></i>
+                                                          Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-rotate-ccw2"></i>
+                                                          Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i>
+                                                          Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i>
+                                                          Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                            class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20 January,
+                                                            2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                    class="badge badge-mark mr-2 border-danger"></span>
+                                                                Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                    class="badge badge-mark mr-2 border-warning-400"></span>
+                                                                High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                    class="badge badge-mark mr-2 border-success"></span>
+                                                                Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                    class="badge badge-mark mr-2 border-grey-300"></span>
+                                                                Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                            class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i class="icon-alarm-add"></i>
+                                                            Check in</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i>
+                                                            Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i>
+                                                            Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                              class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20
+                                                              January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                      class="badge badge-mark mr-2 border-danger"></span>
+                                                                  Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                      class="badge badge-mark mr-2 border-warning-400"></span>
+                                                                  High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                      class="badge badge-mark mr-2 border-success"></span>
+                                                                  Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                      class="badge badge-mark mr-2 border-grey-300"></span>
+                                                                  Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On
+                                                          hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                              class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i
+                                                                  class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                  class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                  class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i class="icon-pencil7"></i>
+                                                              Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i class="icon-cross2"></i>
+                                                              Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                                class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20
+                                                                January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                        class="badge badge-mark mr-2 border-danger"></span>
+                                                                    Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                        class="badge badge-mark mr-2 border-warning-400"></span>
+                                                                    High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                        class="badge badge-mark mr-2 border-success"></span>
+                                                                    Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                        class="badge badge-mark mr-2 border-grey-300"></span>
+                                                                    Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On
+                                                            hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                                class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i
+                                                                    class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                    class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                    class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                    class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                    class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                                  class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20
+                                                                  January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                          class="badge badge-mark mr-2 border-danger"></span>
+                                                                      Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                          class="badge badge-mark mr-2 border-warning-400"></span>
+                                                                      High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                          class="badge badge-mark mr-2 border-success"></span>
+                                                                      Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                          class="badge badge-mark mr-2 border-grey-300"></span>
+                                                                      Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On
+                                                              hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                                  class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i
+                                                                      class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                      class="icon-attachment"></i> Attach screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                      class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                      class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                      class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+
+                                <div class="card mt-4 mb-4">
+                                    <div class="card-body">
+                                        <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
+                                            <div>
+                                                <h6><a href="">#23. New icons set for an iOS app</a></h6>
+                                                <p class="ul-task-manager__paragraph mb-3">A collection of textile samples lay spread out on the table..</p>
+
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" height="36" alt="corrupted 2">
+                                                </a>
+                                                <a href="#">
+                                                    <i class="ul-task-manager__fonts i-Add"></i>
+                                                </a>
+                                                <a href="" class="btn btn-icon bg-transparent border-slate-300 text-slate rounded-round border-dashed"><i
+                                                                    class="icon-plus22"></i></a>
+                                            </div>
+
+                                            <ul class="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
+                                                <li><span class="ul-task-manager__font-date text-muted">20
+                                                                    January, 2015</span></li>
+                                                <li class="dropdown">
+                                                    Priority: &nbsp;
+                                                    <a href="#" class="badge badge-danger align-top dropdown-toggle" data-toggle="dropdown">Blocker</a>
+                                                    <div class="dropdown-menu dropdown-menu-right">
+                                                        <a href="#" class="dropdown-item active"><span
+                                                                            class="badge badge-mark mr-2 border-danger"></span>
+                                                                        Blocker</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                            class="badge badge-mark mr-2 border-warning-400"></span>
+                                                                        High priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                            class="badge badge-mark mr-2 border-success"></span>
+                                                                        Normal priority</a>
+                                                        <a href="#" class="dropdown-item"><span
+                                                                            class="badge badge-mark mr-2 border-grey-300"></span>
+                                                                        Low priority</a>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#">Eternity app</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
+                                        <span>Due: <span class="font-weight-semibold">18 hours</span></span>
+
+                                        <ul class="list-inline mb-0 mt-2 mt-sm-0">
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default " data-toggle="dropdown">On
+                                                                hold</a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Open</a>
+                                                    <a href="#" class="dropdown-item active">On hold</a>
+                                                    <a href="#" class="dropdown-item">Resolved</a>
+                                                    <a href="#" class="dropdown-item">Closed</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item">Dublicate</a>
+                                                    <a href="#" class="dropdown-item">Invalid</a>
+                                                    <a href="#" class="dropdown-item">Wontfix</a>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item dropdown">
+                                                <a href="#" class="text-default" data-toggle="dropdown"><i
+                                                                    class="i-Gear-2"></i></a>
+
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item"><i
+                                                                        class="icon-alarm-add"></i> Check in</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                        class="icon-attachment"></i> Attach
+                                                                    screenshot</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                        class="icon-rotate-ccw2"></i> Reassign</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                        class="icon-pencil7"></i> Edit task</a>
+                                                    <a href="#" class="dropdown-item"><i
+                                                                        class="icon-cross2"></i> Remove</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- pagination -->
+                        <div class="row justify-content-center mt-4">
+
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <!-- end of pagination -->
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- right-sidebar-content -->
+                    <div class="col-xl-3 ">
+                        <!-- search -->
+                        <div class="card  mt-4 mb-3">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle()">Search Task</div>
+                            <div class="card-body" id="custom-toggle">
+                                <input type="text" placeholder="type  &  hit enter" class="form-control">
+                            </div>
+                        </div>
+                        <!-- end of search -->
+                        <!-- actions   -->
+                        <div class="card  mb-3">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle2()">Actions</div>
+                            <div class="card-body" id="custom-toggle2">
+                                <h5 class="card-title">Light card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- end of actions -->
+
+                        <!-- navigation -->
+                        <div class="card  mb-3">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle3()">Navigation</div>
+                            <div class="card-body" id="custom-toggle3">
+
+                                <p class="card-text">Actions</p>
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action active">
+                                        <span class="custom-font"><i class="i-Add-Window">  </i></span>Create Task
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action "><i class="i-Empty-Box"> </i> Create Project</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-Edit"> </i> Edit Task List</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-Add-User"> </i> Assign User</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled"><i class="i-Network"> </i> Create Team </a>
+                                </div>
+                                <div class="mb-4"></div>
+                                <!-- add task -->
+                                <p class="card-text">Tasks</p>
+
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <span class="custom-font"><i class="i-Folders">  </i></span>All Tasks
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action "><i class="i-Add-File"> </i> Active Tasks</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-File-Favorite"> </i> Closed Tasks</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-Administrator"> </i> Assigned To Me  <span class="badge badge-primary badge-pill ml-4">14</span></a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-Conference"> </i> Assigned To My Team  <span class="badge badge-primary badge-pill ml-4">14</span></a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="i-Gears"> </i> Settings  </a>
+
+                                </div>
+
+                                <!-- end of Tasks -->
+                            </div>
+                        </div>
+                        <!-- end of navigation -->
+
+                        <!-- assigners -->
+                        <div class="card  mb-3">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle4()">Assigners</div>
+                            <div class="card-body" id="custom-toggle4">
+                                <ul class="media-list">
+                                    <li class="media mb-2">
+                                        <a href="#" class="mr-4">
+                                            <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" alt="asd" srcset="">
+                                        </a>
+                                        <div class="ul-task-manager__media">
+                                            <a href="">James Alexander gull</a>
+                                            <div class="font-size-sm text-muted">Santa Ana,CA</div>
+                                        </div>
+                                        <div class="ml-3 align-self-center">
+                                            <span class="badge badge-mark"></span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media mb-2">
+                                        <a href="#" class="mr-4">
+                                            <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" alt="asd" srcset="">
+                                        </a>
+                                        <div class="ul-task-manager__media">
+                                            <a href="">James Alexander</a>
+                                            <div class="font-size-sm text-muted">Santa Ana,CA</div>
+                                        </div>
+                                        <div class="ml-3 align-self-center">
+                                            <span class="badge badge-mark "></span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media mb-2">
+                                        <a href="#" class="mr-4">
+                                            <img src="../assets/images/faces/1.jpg" class="rounded-circle" width="36" alt="asd" srcset="">
+                                        </a>
+                                        <div class="ul-task-manager__media">
+                                            <a href="">James Alexander</a>
+                                            <div class="font-size-sm text-muted">Santa Ana,CA</div>
+                                        </div>
+                                        <div class="ml-3 align-self-center">
+                                            <span class="badge badge-mark"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of assigners -->
+
+
+                        <!-- Revisions -->
+                        <div class="card  mb-3">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle5()">Revisions</div>
+                            <div class="card-body" id="custom-toggle5">
+                                <li class="media mb-3">
+                                    <a href="#" class="revision-font">
+                                        <i class="i-Arrow-Down-in-Circle"></i>
+                                    </a>
+                                    <div class="ul-task-manager__media">
+                                        <p class="revisions-p">Add full font overrides for popovers and tooltips</p>
+                                        <div class="font-size-sm text-muted">24 minutes ago</div>
+                                    </div>
+
+                                </li>
+
+                                <li class="media mb-3">
+                                    <a href="#" class="revision-font">
+                                        <i class="i-Arrow-Down-in-Circle"></i>
+                                    </a>
+                                    <div class="ul-task-manager__media">
+                                        <p class="revisions-p">Add full font overrides for popovers and tooltips</p>
+                                        <div class="font-size-sm text-muted">24 minutes ago</div>
+                                    </div>
+
+                                </li>
+
+                                <li class="media mb-3">
+                                    <a href="#" class="revision-font">
+                                        <i class="i-Arrow-Left-in-Circle"></i>
+                                    </a>
+                                    <div class="ul-task-manager__media">
+                                        <p class="revisions-p">Chris Arney created a new Design branch</p>
+                                        <div class="font-size-sm text-muted">2 hours ago</div>
+                                    </div>
+                                    <div class="ml-3 align-self-center">
+                                        <span class="badge badge-mark"></span>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of revisions -->
+                        <!-- completeness stats -->
+                        <div class="card  mb-3 ">
+                            <div class="card-header font-weight-bold dropdown-toggle" onClick="customToggle6()">Completeness Stats</div>
+                            <div class="card-body" id="custom-toggle6">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center mb-1">Blockers <span class="text-muted ml-auto">50%</span></div>
+                                        <div class="progress" style="height: 0.125rem;">
+                                            <div class="progress-bar bg-danger" style="width: 50%">
+                                                <span class="sr-only">50% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center mb-1">High priority <span class="text-muted ml-auto">70%</span></div>
+                                        <div class="progress" style="height: 0.125rem;">
+                                            <div class="progress-bar bg-warning-400" style="width: 70%">
+                                                <span class="sr-only">70% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-3">
+                                        <div class="d-flex align-items-center mb-1">Normal priority <span class="text-muted ml-auto">80%</span></div>
+                                        <div class="progress" style="height: 0.125rem;">
+                                            <div class="progress-bar bg-success-400" style="width: 80%">
+                                                <span class="sr-only">80% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="d-flex align-items-center mb-1">Low priority <span class="text-muted ml-auto">60%</span></div>
+                                        <div class="progress" style="height: 0.125rem;">
+                                            <div class="progress-bar bg-grey-400" style="width: 60%">
+                                                <span class="sr-only">60% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end of completeness -->
+                    </div>
+                    <!-- end of sidebar content -->
+
+                    <!-- end-of-content -->
+
+
+
+                    <!-- Footer Start -->
+                    <div class="flex-grow-1"></div>
+                    <div class="app-footer">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <p><strong>Gull - Laravel + Bootstrap 4 admin template</strong></p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero quis beatae officia saepe perferendis voluptatum minima eveniet voluptates dolorum, temporibus nisi maxime nesciunt totam repudiandae commodi sequi dolor
+                                    quibusdam sunt.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center">
+                            <a class="btn btn-primary text-white btn-rounded" href="https://themeforest.net/user/mh_rafi" target="_blank">Buy
+                Gull HTML</a>
+                            <span class="flex-grow-1"></span>
+                            <div class="d-flex align-items-center">
+                                <img class="logo" src="./assets/images/logo.png" alt="">
+                                <div>
+                                    <p class="m-0">&copy; 2018 Gull HTML</p>
+                                    <p class="m-0">All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fotter end -->
+                </div>
+            </div>
+            <!-- ============ Body content End ============= -->
+        </div>
+        <!--=============== End app-admin-wrap ================-->
+
+        <!-- ============ Search UI Start ============= -->
+        <div class="search-ui">
+            <div class="search-header">
+                <img src="./assets/images/logo.png" alt="" class="logo">
+                <button class="search-close btn btn-icon bg-transparent float-right mt-2">
+                <i class="i-Close-Window text-22 text-muted"></i>
+            </button>
+            </div>
+
+            <input type="text" placeholder="Type here" class="search-input" autofocus>
+
+            <div class="search-title">
+                <span class="text-muted">Search results</span>
+            </div>
+
+            <div class="search-results list-horizontal">
+                <div class="list-item col-md-12 p-0">
+                    <div class="card o-hidden flex-row mb-4 d-flex">
+                        <div class="list-thumb d-flex">
+                            <!-- TUMBNAIL -->
+                            <img src="./assets/images/products/headphone-1.jpg" alt="">
+                        </div>
+                        <div class="flex-grow-1 pl-2 d-flex">
+                            <div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center flex-lg-row">
+                                <!-- OTHER DATA -->
+                                <a href="" class="w-40 w-sm-100">
+                                    <div class="item-title">Headphone 1</div>
+                                </a>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">
+                                    $300
+                                    <del class="text-secondary">$400</del>
+                                </p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+                                    <span class="badge badge-danger">Sale</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item col-md-12 p-0">
+                    <div class="card o-hidden flex-row mb-4 d-flex">
+                        <div class="list-thumb d-flex">
+                            <!-- TUMBNAIL -->
+                            <img src="./assets/images/products/headphone-2.jpg" alt="">
+                        </div>
+                        <div class="flex-grow-1 pl-2 d-flex">
+                            <div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center flex-lg-row">
+                                <!-- OTHER DATA -->
+                                <a href="" class="w-40 w-sm-100">
+                                    <div class="item-title">Headphone 1</div>
+                                </a>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">
+                                    $300
+                                    <del class="text-secondary">$400</del>
+                                </p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+                                    <span class="badge badge-primary">New</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item col-md-12 p-0">
+                    <div class="card o-hidden flex-row mb-4 d-flex">
+                        <div class="list-thumb d-flex">
+                            <!-- TUMBNAIL -->
+                            <img src="./assets/images/products/headphone-3.jpg" alt="">
+                        </div>
+                        <div class="flex-grow-1 pl-2 d-flex">
+                            <div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center flex-lg-row">
+                                <!-- OTHER DATA -->
+                                <a href="" class="w-40 w-sm-100">
+                                    <div class="item-title">Headphone 1</div>
+                                </a>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">
+                                    $300
+                                    <del class="text-secondary">$400</del>
+                                </p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+                                    <span class="badge badge-primary">New</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item col-md-12 p-0">
+                    <div class="card o-hidden flex-row mb-4 d-flex">
+                        <div class="list-thumb d-flex">
+                            <!-- TUMBNAIL -->
+                            <img src="./assets/images/products/headphone-4.jpg" alt="">
+                        </div>
+                        <div class="flex-grow-1 pl-2 d-flex">
+                            <div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center flex-lg-row">
+                                <!-- OTHER DATA -->
+                                <a href="" class="w-40 w-sm-100">
+                                    <div class="item-title">Headphone 1</div>
+                                </a>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100">
+                                    $300
+                                    <del class="text-secondary">$400</del>
+                                </p>
+                                <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+                                    <span class="badge badge-primary">New</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PAGINATION CONTROL -->
+            <div class="col-md-12 mt-5 text-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination d-inline-flex">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- ============ Search UI End ============= -->
+
+        <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/vendor/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/es5/script.min.js"></script>
+        <script src="assets/js/es5/sidebar.large.script.min.js"></script>
+        <script src="assets/js/es5/task-manager.min.js"></script>
+
+</body>
+
+</html>

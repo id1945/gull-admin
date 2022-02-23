@@ -1,0 +1,40 @@
+<div class="breadcrumb">
+  <h1>Grid</h1>
+  <ul>
+    <li><a href="">Contacts</a></li>
+    <li>Grid</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+<div class="row">
+  <div class="col-lg-4 col-xl-4  mb-3" *ngFor="let contact of contacts | paginate: { itemsPerPage: 9, currentPage: page }; let i = index">
+    <div class="card">
+      <div class="card-body">
+        <div class="ul-contact-page__profile">
+          <div class="user-profile">
+            <img
+              class="profile-picture mb-2"
+              [src]="contact.avatar"
+              alt=""
+            />
+          </div>
+          <div class="ul-contact-page__info">
+            <p class="m-0 text-24">{{contact.name}}</p>
+            <p class="text-muted m-0">Web Developer</p>
+            <p class="text-muted mt-3">
+              {{contact.address}}
+            </p>
+
+            <p class="text-muted mt-3">NO: 234-987-665-340</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGINATION CONTROL -->
+  <div class="col-md-12 mt-3" *ngIf="contacts?.length">
+    <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="breadcrumb">
+	<h1>Version 4</h1>
+	<ul>
+		<li><a href="">Dashboard</a></li>
+		<li>Version 4</li>
+	</ul>
+</div>
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row mb-5">
+	<div class="col-md-4 mb-5">
+		<span class="text-28">$20038</span>
+		<p class="text-small text-muted m-0">Sales in current month</p>
+		<div echarts [options]="chartLineSmall1" [autoResize]="true" style="height: 65px;"></div>
+		<div class="d-flex justify-content-between mt-4">
+			<div class="flex-grow-1">
+				<span class="text-small">Pages / Visit</span>
+				<h5 class="m-0 font-weight-bold text-muted">2065</h5>
+			</div>
+			<div class="flex-grow-1">
+				<span class="text-small">New user</span>
+				<h5 class="m-0 font-weight-bold text-muted">465</h5>
+			</div>
+			<div class="flex-grow-1">
+				<span class="text-small">Last week</span>
+				<h5 class="m-0 font-weight-bold text-muted">23456</h5>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 mb-5">
+		<span class="text-28">$7038</span>
+		<p class="text-small text-muted m-0">Sales in current week</p>
+		<div echarts [options]="chartLineSmall1" [autoResize]="true" style="height: 65px;"></div>
+		<div class="d-flex justify-content-between mt-4">
+			<div class="flex-grow-1">
+				<span class="text-small">Pages / Visit</span>
+				<h5 class="m-0 font-weight-bold text-muted">2065</h5>
+			</div>
+			<div class="flex-grow-1">
+				<span class="text-small">New user</span>
+				<h5 class="m-0 font-weight-bold text-muted">465</h5>
+			</div>
+			<div class="flex-grow-1">
+				<span class="text-small">Last week</span>
+				<h5 class="m-0 font-weight-bold text-muted">23456</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="d-flex justify-content-between mb-2">
+			<div class="flex-grow-1">
+				<p class="text-small text-muted m-0">Sales in current month</p>
+				<p class="text-24 mb-3"><i class="i-Arrow-Up-in-Circle text-success"></i> 80765</p>
+			</div>
+			<div class="flex-grow-1">
+				<p class="text-small text-muted m-0">Sales in last month</p>
+				<p class="text-24 mb-3"><i class="i-Arrow-Down-in-Circle text-danger"></i> 10765</p>
+			</div>
+		</div>
+		<div class="d-flex justify-content-between border-bottom p-2">
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>2070</strong> Sales</p>
+			</div>
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>100</strong> Expense</p>
+			</div>
+		</div>
+		<div class="d-flex justify-content-between border-bottom p-2">
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>4000</strong> Sales</p>
+			</div>
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>2000</strong> Expense</p>
+			</div>
+		</div>
+		<div class="d-flex justify-content-between p-2">
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>3070</strong> Sales</p>
+			</div>
+			<div class="flex-grow-1">
+				<p class="text-12 text-muted m-0"><strong>1770</strong> Expense</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<div echarts [options]="lineChart1" [autoResize]="true" style="height: 180px;"></div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="card o-hidden mb-4">
+			<ngx-datatable style="height: calc(100vh - 270px); box-shadow: none" class="material fullscreen" [columnMode]="'force'"
+			 [headerHeight]="50" [footerHeight]="50" [rowHeight]="60" [scrollbarV]="true" [limit]="10" [rows]="products$ | async">
+				<ngx-datatable-column name="photo" [maxWidth]="100">
+					<ng-template ngx-datatable-header-template>
+						Thumbnail
+					</ng-template>
+					<ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+						<img height="32px" width="32px" style="border-radius: 4px" [src]="value" alt="">
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column name="name" [width]="300">
+					<ng-template ngx-datatable-header-template>
+						Title
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column name="category">
+					<ng-template ngx-datatable-header-template>
+						Category
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column name="subtitle">
+					<ng-template ngx-datatable-header-template>
+						Description
+					</ng-template>
+				</ngx-datatable-column>
+			</ngx-datatable>
+		</div>
+	</div>
+</div>

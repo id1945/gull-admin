@@ -1,0 +1,46 @@
+<div class="card o-hidden" [@animate]="{value:'*',params:{y:'120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="p-4">
+          <div class="auth-logo text-center mb-4">
+            <img src="assets/images/logo.png" alt="">
+          </div>
+          <h1 class="mb-3 text-18">Sign In</h1>
+          <form [formGroup]="signinForm" (ngSubmit)="signin()">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" class="form-control form-control-rounded" formControlName="email" type="email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" class="form-control form-control-rounded" formControlName="password" type="password">
+            </div>
+            <!-- <button class="btn btn-rounded btn-primary btn-block mt-2">Sign In</button> -->
+            <btn-loading btnClass="btn-primary btn-rounded btn-block mt-3" [loadingText]="loadingText" [loading]="loading">
+              Sign In
+            </btn-loading>
+          </form>
+
+          <div class="mt-3 text-center">
+            <a href="" class="text-muted" routerLink="/sessions/forgot"><u>Forgot Password</u></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center " style="background-size: cover;background-image: url(./assets/images/photo-long-3.jpg)">
+        <div class="pr-3 auth-right">
+          <button class="btn btn-rounded btn-outline-primary btn-outline-email btn-block btn-icon-text" routerLink="/sessions/signup">
+            <i class="i-Mail-with-At-Sign"></i>
+            Sign up with Email
+          </button>
+          <button class="btn btn-rounded btn-outline-primary btn-outline-google btn-block btn-icon-text">
+            <i class="i-Google-Plus"></i>
+            Sign up with Google
+          </button>
+          <button class="btn btn-rounded btn-outline-primary btn-block btn-icon-text btn-outline-facebook">
+            <i class="i-Facebook-2"></i>
+            Sign up with Facebook
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

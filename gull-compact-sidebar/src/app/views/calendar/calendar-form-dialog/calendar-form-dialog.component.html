@@ -1,0 +1,100 @@
+<form name="eventForm" [formGroup]="eventForm" class="event-form p-3">
+    <div class="row">
+
+      <div class="col-md-12 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="title" 
+          formControlName="title" 
+          placeholder="Title*" 
+          >
+      </div>
+      
+    </div>
+    <div class="row" formGroupName="color">
+      <div class="col-md-6 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="title" 
+          formControlName="primary" 
+          placeholder="Title" 
+          placeholder="Primary color" 
+          [(colorPicker)]="event?.color.primary"
+          [style.background]="event?.color.primary" 
+          (colorPickerChange)="eventForm.patchValue({color:{primary: event?.color.primary}})"
+          >
+      </div>
+      <div class="col-md-6 form-group">
+        <input 
+          class="form-control form-control-rounded" 
+          name="secondaryColor" 
+          formControlName="secondary" 
+          placeholder="Secondary color"
+          [(colorPicker)]="event?.color.secondary" 
+          [style.background]="event?.color.secondary" 
+          (colorPickerChange)="eventForm.patchValue({color:{secondary: event?.color.secondary}})"
+          >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <div class="input-group">
+          <input type="text"
+          class="form-control form-control-rounded"
+          ngbDatepicker 
+          #startDate="ngbDatepicker"
+          placeholder="Start Date"
+          name="startDate" 
+          formControlName="start"
+          >
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-rounded" (click)="startDate.toggle()" type="button">
+              <i class="icon-regular i-Calendar-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 form-group">
+        <div class="input-group">
+          <input type="text"
+          class="form-control form-control-rounded"
+          ngbDatepicker 
+          #endDate="ngbDatepicker"
+          placeholder="End Date" 
+          name="endDate" 
+          formControlName="end">
+          <div class="input-group-append">
+            <button class="btn btn-secondary btn-rounded" (click)="endDate.toggle()" type="button">
+              <i class="icon-regular i-Calendar-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row" formGroupName="meta">
+      <div class="col-md-12 form-group">
+        <input 
+          type="text" 
+          class="form-control form-control-rounded"
+          name="location" 
+          formControlName="location" 
+          placeholder="Location">
+      </div>
+
+      <div class="col-md-12 form-group">
+        <textarea 
+          class="form-control form-control-rounded" 
+          formControlName="notes" 
+          placeholder="Notes" 
+          max-rows="4">
+          </textarea>
+      </div>
+    </div>
+
+  </form>
+  <div class="modal-footer">
+    <button [disabled]="eventForm.invalid" class="btn btn-primary btn-rounded" (click)="activeModal.close({action: 'save', event: eventForm.value})">Save</button>
+  </div>

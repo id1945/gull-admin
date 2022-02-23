@@ -1,0 +1,101 @@
+<div class="breadcrumb">
+  <h1>List</h1>
+  <ul>
+    <li><a href="">Data Table</a></li>
+    <li>List</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+<div class="row mb-4">
+  <!-- GRID AND LIST BUTTONS -->
+  <div class="col-6">
+    <button class="btn btn-sm btn-rounded btn-outline-light btn-svg mr-2" [ngClass]="{active: viewMode === 'grid'}" (click)="viewMode = 'grid'">
+      <svg version="1.1" width="16px" id="grid" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px" y="0px" viewBox="0 0 369.946 369.946" style="enable-background:new 0 0 369.946 369.946;" xml:space="preserve">
+        <path d="M250.609,0h-11.934H131.271h-11.934H0v119.337v11.934v107.404v11.934v119.337h119.337h11.934
+            h107.404h11.934h119.337V250.609v-11.934V131.271v-11.934V0H250.609z M238.675,11.934v107.404H131.271V11.934H238.675z
+             M238.675,131.271v107.404H131.271V131.271H238.675z M11.934,11.934h107.404v107.404H11.934V11.934z M11.934,131.271h107.404
+            v107.404H11.934V131.271z M11.934,358.012V250.609h107.404v107.404H11.934z M131.271,358.012V250.609h107.404v107.404H131.271z
+             M358.012,358.012H250.609V250.609h107.404V358.012z M358.012,238.675H250.609V131.271h107.404V238.675z M250.609,119.337V11.934
+            h107.404v107.404H250.609z" />
+      </svg>
+    </button>
+    <button class="btn btn-sm btn-rounded btn-outline-light btn-svg" [ngClass]="{active: viewMode === 'list'}" (click)="viewMode = 'list'">
+      <svg version="1.1" id="list" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" width="16px" height="16px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+        <path d="M0,97.92v24.48h612V97.92H0z M0,318.24h612v-24.48H0V318.24z M0,514.08h612V489.6H0V514.08z" />
+      </svg>
+    </button>
+  </div>
+  <!-- SELECT CEHECKBOX -->
+  <div class="col-6">
+    <div class="btn-group float-right">
+      <button type="button" class="btn btn-outline-light btn-rounded btn-checkbox">
+        <label class="checkbox checkbox-outline-light">
+          <input type="checkbox" [(ngModel)]="allSelected" (change)="selectAll($event)">
+          <span></span>
+          <span class="checkmark"></span>
+        </label>
+      </button>
+      <div class="btn-group" ngbDropdown role="group" aria-label="Select all" placement="left">
+        <button class="btn btn-outline-light btn-rounded" ngbDropdownToggle></button>
+        <div class="dropdown-menu" ngbDropdownMenu>
+          <button class="dropdown-item">Delete</button>
+          <button class="dropdown-item">Move to</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DATA LIST -->
+<div class="row" [ngClass]="{'list-horizontal': viewMode === 'list', 'list-grid': viewMode === 'grid'}">
+  <!-- SINGLE LIST ITEM -->
+  <div *ngFor="let item of products | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index" 
+    class="list-item"
+    [ngClass]="{'col-md-12': viewMode === 'list', 'col-md-3': viewMode === 'grid'}"
+    [@animate]="{value:'*',params:{delay: (i*100)+'ms', y:'50px'}}"
+  >
+    <div class="card o-hidden mb-4 d-flex" [ngClass]="{'flex-row': viewMode === 'list', 'flex-column': viewMode === 'grid'}">
+      <div class="list-thumb d-flex">
+        <!-- TUMBNAIL -->
+        <img [src]="item.photo" alt="">
+      </div>
+      <div class="flex-grow-1" [ngClass]="{'pl-2 d-flex': viewMode === 'list', 'd-bock': viewMode === 'grid'}">
+        <div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center"
+          [ngClass]="{'flex-lg-row': viewMode === 'list'}">
+          <!-- OTHER DATA -->
+          <a href="" class="w-40 w-sm-100">
+            <div class="item-title">{{item.name}}</div>
+          </a>
+          <p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+          <p class="m-0 text-muted text-small w-15 w-sm-100">
+            {{item?.price?.sale | currency}}
+            <del class="text-secondary">{{item?.price?.previous | currency}}</del>
+          </p>
+          <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+            <span class="badge badge-{{item?.badge?.color}}">{{item?.badge?.text}}</span>
+          </p>
+          <p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-actions">
+            <button class="btn btn-icon bg-transparent"
+            [ngClass]="{'d-none': viewMode === 'grid'}">
+              <i class="i-File-Edit text-16 text-primary"></i>
+            </button>
+          </p>
+        </div>
+        <div class="align-self-center pl-3 pb-2 pr-3 item-select">
+          <label class="checkbox checkbox-outline-light">
+            <input type="checkbox" [(ngModel)]="item.isSelected">
+            <span></span>
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PAGINATION CONTROL -->
+  <div class="col-md-12 mt-3" *ngIf="products?.length">
+    <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+  </div>
+</div>

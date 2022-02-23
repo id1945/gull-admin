@@ -1,0 +1,52 @@
+<div class="">
+    <div class="breadcrumb">
+      <h1>Fullscreen</h1>
+      <ul>
+        <li><a href="#">Data Table</a></li>
+        <li>Fullscreen</li>
+      </ul>
+    </div>
+  
+    <div class="separator-breadcrumb border-top"></div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card  o-hidden">
+              <ngx-datatable
+              style="height: calc(100vh - 270px); box-shadow: none"
+              class="material fullscreen"
+              [columnMode]="'force'"
+              [headerHeight]="50"
+              [footerHeight]="0"
+              [rowHeight]="60"
+              [scrollbarV]="true"
+              [scrollbarH]="true"
+              [rows]="products$ | async">
+              <ngx-datatable-column name="photo" [maxWidth]="100">
+                  <ng-template ngx-datatable-header-template>
+                    Thumbnail
+                  </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        <img height="32px" width="32px" style="border-radius: 4px" [src]="value" alt="">
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="name" [width]="300">
+                  <ng-template ngx-datatable-header-template>
+                    Title
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="category">
+                  <ng-template ngx-datatable-header-template>
+                    Category
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column name="subtitle">
+                  <ng-template ngx-datatable-header-template>
+                    Description
+                  </ng-template>
+                </ngx-datatable-column>
+            </ngx-datatable>
+          </div>
+      </div>
+    </div>
+</div>  

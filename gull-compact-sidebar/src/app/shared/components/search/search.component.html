@@ -1,0 +1,49 @@
+<div class="search-ui rtl-ps-none" perfectScrollbar [@animate]="{value:'*',params:{y:'120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+	<div class="search-header">
+		<img src="./assets/images/logo.png" alt="" class="logo">
+		<button class="btn btn-icon bg-transparent float-right mt-2" (click)="searchService.searchOpen = false">
+			<i class="i-Close-Window text-22 text-muted"></i>
+		</button>
+	</div>
+
+	<input type="text" placeholder="Type here" class="search-input" [formControl]="searchCtrl" autofocus>
+
+	<div class="search-title">
+		<span class="text-muted">Search results</span>
+	</div>
+
+	<div class="search-results list-horizontal">
+		<div *ngFor="let item of results$ | async | paginate: { itemsPerPage: pageSize, currentPage: page }; let i = index;" 
+			class="list-item col-md-12 p-0"
+			[@animate]="{value:'*',params:{delay: (i*100)+'ms', y:'50px'}}"
+		>
+			<div class="card o-hidden flex-row mb-4 d-flex">
+				<div class="list-thumb d-flex">
+					<!-- TUMBNAIL -->
+					<img [src]="item.photo" alt="">
+				</div>
+				<div class="flex-grow-1 pl-2 d-flex">
+					<div class="card-body align-self-center d-flex flex-column justify-content-between align-items-lg-center flex-lg-row">
+						<!-- OTHER DATA -->
+						<a href="" class="w-40 w-sm-100">
+						<div class="item-title">{{item.name}}</div>
+						</a>
+						<p class="m-0 text-muted text-small w-15 w-sm-100">Gadget</p>
+						<p class="m-0 text-muted text-small w-15 w-sm-100">
+						{{item?.price?.sale | currency}}
+						<del class="text-secondary">{{item?.price?.previous | currency}}</del>
+						</p>
+						<p class="m-0 text-muted text-small w-15 w-sm-100 d-none d-lg-block item-badges">
+						<span class="badge badge-outline-{{item?.badge?.color}}">{{item?.badge?.text}}</span>
+						</p>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PAGINATION CONTROL -->
+	<div class="col-md-12 mt-3" *ngIf="results$ | async">
+		<pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+	</div>
+</div>

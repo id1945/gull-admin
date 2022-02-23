@@ -1,0 +1,150 @@
+html [type="button"], .btn[type="button"] {
+    -webkit-appearance: none !important;
+}
+.btn {
+    &.rounded, &.btn-rounded {
+        border-radius: 40px;
+    }
+    &.btn-wide {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+.btn-secondary {
+    color: $foreground;
+    background-color: $gray-200;
+}
+
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    [class^="i-"], .icon {
+        vertical-align: middle;
+        margin: 0 2px;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+.btn-icon-text {
+    [class^="i-"], .icon {
+        vertical-align: middle;
+        margin: 0 2px;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+.btn-facebook {
+    background: $facebook;
+    border-color: $facebook;
+    &:hover {
+        background: darken($facebook, 5%);
+        border-color: darken($facebook, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($facebook, 0.5)
+    }
+}
+.btn-facebook {
+    background: $google;
+    border-color: $google;
+    &:hover {
+        background: darken($google, 5%);
+        border-color: darken($google, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($google, 0.5)
+    }
+}
+.btn-twitter {
+    background: $twitter;
+    border-color: $twitter;
+    &:hover {
+        background: darken($twitter, 5%);
+        border-color: darken($twitter, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($twitter, 0.5)
+    }
+}
+
+.btn-outline-facebook {
+    color: $facebook;
+    border-color: $facebook;
+    background: rgba($gray-200, .6);
+    &:hover {
+        background: darken($facebook, 5%);
+        border-color: darken($facebook, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($facebook, 0.5)
+    }
+}
+.btn-outline-google {
+    color: $google;
+    border-color: $google;
+    background: rgba($gray-200, .6);
+    &:hover {
+        background: darken($google, 5%);
+        border-color: darken($google, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($google, 0.5)
+    }
+}
+.btn-outline-twitter {
+    color: $twitter;
+    border-color: $twitter;
+    background: rgba($gray-200, .6);
+    &:hover {
+        background: darken($twitter, 5%);
+        border-color: darken($twitter, 5%);
+    }
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($twitter, 0.5)
+    }
+}
+
+.btn-outline-email {
+    background: rgba($gray-200, .6);
+}
+
+.btn-spinner {
+    width: 1em;
+    height: 1em;
+    background: transparent;
+    border-radius: 50%;
+    margin: 0 16px 0 0;
+    border: 2px solid transparent;
+}
+.btn-checkbox {
+    .checkbox {
+        display: inline;
+    }
+}
+
+.btn.btn-outline-light.btn-svg {
+    border-color: $gray-700;
+    &.active, &:hover {
+        background: $primary;
+        border-color: $primary;
+        svg {
+            fill: #ffffff;
+        }
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+@each $name, $value in $theme-colors {
+    .btn-#{$name} {
+        .btn-spinner {
+            animation: btn-glow-#{$name} 1s ease infinite;
+        }
+    }
+    @keyframes btn-glow-#{$name} {
+        0% { box-shadow: 0 0 0 .4em darken($value, 10%), 0 0 0 .1em darken($value, 10%); transform:rotate(360deg); }
+        50% { border-top-color: #ffffff;}
+        100% { box-shadow: 0 0 0 .4em darken($value, 10%), 0 0 0 3.6em transparent; }
+    }
+}

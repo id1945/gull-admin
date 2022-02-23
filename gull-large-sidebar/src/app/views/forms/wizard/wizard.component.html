@@ -1,0 +1,116 @@
+<div class="breadcrumb">
+  <h1>Form Wizard</h1>
+  <ul>
+    <li><a href="">Form</a></li>
+    <li>Wizard</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-12">
+   
+    <form-wizard>
+      <wizard-step [title]="'Basic Info'" [isValid]="basicForm.form.valid" (onNext)="onStep1Next($event)">
+        <form #basicForm="ngForm">
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"
+                [(ngModel)]="data.firstName">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"
+                [(ngModel)]="data.lastName">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                [(ngModel)]="data.email">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="phone">Phone number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number"
+                [(ngModel)]="data.phone">
+            </div>
+          </div>
+        </form>
+      </wizard-step>
+
+      <wizard-step [title]="'Company info'" [isValid]="step2Form.valid" (onNext)="onStep2Next($event)">
+        <form [formGroup]="step2Form">
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="mb-2">Employees</h6>
+              <label class="checkbox checkbox-primary">
+                <input type="checkbox" checked>
+                <span>Designer</span>
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox checkbox-secondary">
+                <input type="checkbox" checked>
+                <span>Coder</span>
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox checkbox-success">
+                <input type="checkbox" checked>
+                <span>QA</span>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-md-6">
+                <h6 class="mb-2">Company age</h6>
+                <label class="radio radio-outline-primary">
+                  <input type="radio" name="experience" [value]="1" formControlName="experience">
+                  <span>Less than 1 Year</span>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio radio-outline-success">
+                  <input type="radio" name="experience" [value]="3" formControlName="experience">
+                  <span>1-5 Years</span>
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio radio-outline-warning">
+                  <input type="radio" name="experience" [value]="4" formControlName="experience">
+                  <span>5+ Years</span>
+                  <span class="checkmark"></span>
+                </label>
+            </div>
+          </div>
+        </form>
+      </wizard-step>
+
+      <wizard-step [title]="'Payment Info'" (onNext)="onStep3Next($event)">
+        <form #paymentForm="ngForm">
+          <div class="row">
+            <div class="form-group col-md-6 mb-3">
+              <label for="card">Card number</label>
+              <input type="text" class="form-control" id="card" name="card" placeholder="Card Number"
+                [(ngModel)]="data.card">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="exp">Expires at</label>
+              <input type="text" class="form-control" id="exp" name="exp" placeholder="Expires at"
+                [(ngModel)]="data.cardExpiresAt">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="security">Security code</label>
+              <input type="text" class="form-control" id="security" name="exp" placeholder="Security code"
+                [(ngModel)]="data.code">
+            </div>
+          </div>
+        </form>
+      </wizard-step>
+
+      <wizard-step [title]="'Final'" (onComplete)="onComplete($event)">
+        <div class="text-center mt-4 mb-4">
+            <i class="i-Checked-User text-32 mb-3 text-success d-inline-block"></i>
+            <h5 class="font-weight-light">Thank you! You have completed all the steps.</h5>
+        </div>
+      </wizard-step>
+    </form-wizard>
+     
+  </div>
+</div>

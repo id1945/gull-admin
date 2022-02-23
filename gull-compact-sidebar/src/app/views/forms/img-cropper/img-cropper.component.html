@@ -1,0 +1,40 @@
+<div class="breadcrumb">
+  <h1>Image Cropper</h1>
+  <ul>
+    <li><a href="">Forms</a></li>
+    <li>Image Cropper</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">NGX Image Cropper</div>
+        <div>
+          <button class="btn btn-outline-primary btn-rounded mr-3" (click)="open(modalCropper)">Launch Cropper</button>
+          <img *ngIf="data?.image" class="rounded-circle" [src]="data?.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalCropper let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Upload & Crop</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img-cropper [image]="data" [settings]="cropperSettings"></img-cropper><br>
+    <img *ngIf="data?.image" class="mt-3  mr-3" [src]="data?.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+    <img *ngIf="data?.image" class="rounded-circle  mt-3" [src]="data?.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-rounded btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
